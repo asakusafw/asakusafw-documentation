@@ -2,7 +2,7 @@
 Asakusa Vanilla
 ===============
 
-Asakusa Vanillaは、Asakusa Frameworkの内部機能として提供するDAG実行エンジン実装用のツールセットを使った、実行エンジンのリファレンス実装です。
+Asakusa Vanillaは、主にアプリケーションのテスト用に設計された、Asakusa Framework実行エンジンのリファレンス実装です。
 
 Asakusa Vanillaは単一ノード上でアプリケーションを実行します。
 軽量で比較的コンパイル速度が速く、実行時にJVM以外の環境を必要としない、といった特徴を持っているため
