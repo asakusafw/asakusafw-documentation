@@ -2,10 +2,36 @@
 ビューAPI
 =========
 
-ビューAPIはAsakusa DSLの拡張機能で、データフロー上の任意の中間出力を、演算子から柔軟に参照するためのインターフェースを提供します。ビューAPIを利用するメリットには以下のようなものがあります。
+ビューAPIはAsakusa DSLの拡張機能で、データフロー上の任意の中間出力を、演算子から柔軟に参照するためのインターフェースを提供します。ビューは主にバッチ全体の定数表を効率よく扱うためのしくみで、以下のような定数データを外部データソースから取り込んで演算子メソッドから利用できます。
 
-* 演算子からバッチ全体の設定情報や定数情報（定数表）といった補助データに対して、結合処理を行わずに簡潔にアクセスする。
-* 複雑な条件を伴う結合処理（例えばデータ範囲を条件とする結合）などを、演算子として効率よく実装する。
+以下は「消費税率」などの税率テーブルをデータベースなどに保持し、演算子内から参照するサンプルコード片です。
+
+..  code-block:: java
+    :emphasize-lines: 11
+
+    private static final StringOption KEY_CTAX = new StringOption("消費税");
+
+    /**
+     * 消費税を計算する。
+     * @param detail 販売明細
+     * @param taxTable 税率テーブル
+     */
+    @Update
+    public void updateTax(
+            SalesDetail detail,
+            @Key(group = "name") GroupView<TaxEntry> taxTable) {
+
+        // 税率テーブルから「消費税」に関する情報を取得する
+        TaxEntry tax = taxTable.find(KEY_CTAX).get(0);
+
+        // 総額から本体価格を算出する
+        BigDecimal totalPrice = BigDecimal.valueOf(detail.getSellingPrice());
+        BigDecimal priceWithoutTax = totalPrice.divide(BigDecimal.ONE.add(tax.getRate()));
+
+        // ...
+    }
+
+また、バッチ内で作成した中間データ（集計結果など）を上記と同様に定数表として参照したり、柔軟なテーブル化の機能を利用して複雑な条件を伴う結合処理（例えばデータ範囲を条件とする結合）などを、効率よく実現したりすることが可能です。
 
 ..  attention::
     Asakusa on MapReduceではビューAPIを利用できません。
