@@ -732,7 +732,7 @@ Direct I/O Hiveの構成に関する規約プロパティは、 ``asakusafwOrgan
       - この値をtrueにすると Direct I/O Hive連携モジュール用の構成を行う
     * - ``libraries``
       - java.util.List
-      - ``org.apache.hive:hive-exec:1.1.1``
+      - ``org.apache.hive:hive-exec:1.2.2``
       - Directi I/O Hiveが実行時に使用するHiveライブラリ
 
 ..  [#] これらのプロパティは規約オブジェクト :asakusa-gradle-groovydoc:`com.asakusafw.gradle.plugins.AsakusafwOrganizerPluginConvention.HiveConfiguration` が提供します。

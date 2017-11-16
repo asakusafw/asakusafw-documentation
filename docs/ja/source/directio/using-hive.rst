@@ -385,17 +385,17 @@ b) Hiveデータ型とカラムナフォーマットのデータ型とのマッ�
       - ``STRING``
       - * ``VARCHAR``
         * ``CHAR``
-      - ``VARCHAR`` はHive ``0.12`` 以降から利用可能、 ``CHAR`` はHive ``0.13`` 以降から利用可能
+      -
     * - ``DECIMAL``
       - ``DECIMAL``
       - * ``DECIMAL(精度とスケールの指定)``
         * ``STRING``
-      - 精度とスケールの指定はHive ``0.13`` 以降から利用可能
+      -
     * - ``DATE``
       - ``DATE``
       - * ``TIMESTAMP``
         * ``STRING``
-      - ``DATE`` はHive ``0.12`` 以降から利用可能
+      -
     * - ``DATETIME``
       - ``TIMESTAMP``
       - * ``STRING``
@@ -430,10 +430,8 @@ b) Hiveデータ型とカラムナフォーマットのデータ型とのマッ�
 Hiveのバージョンに関して
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asakusa Framework バージョン |version| では、Direct I/O の Hive連携モジュールにはHiveのバージョン ``1.1.1`` を使用しています。
+Asakusa Framework バージョン |version| では、Direct I/O の Hive連携モジュールにはHiveのバージョン ``1.2.2`` を使用しています。
 実行環境のHiveとAsakusa Frameworkが利用するHiveのバージョンが異なる場合、データの互換性に対する注意が必要です。
-
-例えば実行環境のHiveバージョンが ``0.11`` の場合、Asakusa Frameworkが利用するHiveのバージョンではHiveの ``VARCHAR`` 型や ``CHAR`` 型を持つファイルを生成することができますが、生成したファイルを実行環境のHiveは取り扱うことができません。
 
 マッピング型変換機能
 ^^^^^^^^^^^^^^^^^^^^
@@ -510,10 +508,6 @@ Hiveデータ型とカラムナフォーマットのデータ型とのマッピ�
 
 * `LanguageManual ORC <https://cwiki.apache.org/confluence/display/Hive/LanguageManual+ORC>`_
 * `Parquet <https://cwiki.apache.org/confluence/display/Hive/Parquet>`_
-
-..  attention::
-    Asakusa Framework バージョン |version| では、Direct I/OはHiveのバージョン ``1.1.1`` のライブラリを使用しています。
-    そのため、Parquetに関しては上記のHiveのドキュメントに記載がある通り、DATEデータ型がサポートされていないことに注意してください。
 
 カラムナフォーマットファイルから除外するプロパティ
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
