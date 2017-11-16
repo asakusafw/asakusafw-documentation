@@ -35,6 +35,7 @@ todo_include_todos = True
 extlinks = {
     'milestone-asakusafw': ("https://github.com/asakusafw/asakusafw/issues?&q=milestone:%s", 'asakusafw milestone:'),
     'milestone-asakusafw-sdk': ("https://github.com/asakusafw/asakusafw-sdk/issues?&q=milestone:%s", 'asakusafw-sdk milestone:'),
+    'milestone-asakusafw-mapreduce': ("https://github.com/asakusafw/asakusafw-mapreduce/issues?&q=milestone:%s", 'asakusafw-mapreduce milestone:'),
     'milestone-asakusafw-compiler': ("https://github.com/asakusafw/asakusafw-compiler/issues?&q=milestone:%s", 'asakusafw-compiler milestone:'),
     'milestone-asakusafw-spark': ("https://github.com/asakusafw/asakusafw-spark/issues?&q=milestone:%s", 'asakusafw-spark milestone:'),
     'milestone-asakusafw-dag': ("https://github.com/asakusafw/asakusafw-dag/issues?&q=milestone:%s", 'asakusafw-dag milestone:'),
