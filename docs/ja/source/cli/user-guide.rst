@@ -1080,6 +1080,7 @@ SLF4JのSimpleLogger [#]_ のシステムプロパティを環境変数 ``ASAKUS
 
     $ asakusa version -v
     0.10.0
-    ASAKUSA_HOME=/home/asakusa/asakusa_home
-    java.version=1.8.0_121
-    java.vendor=Oracle Corporation
+    ASAKUSA_HOME: /home/asakusa/asakusa
+    Hadoop: /usr/local/lib/hadoop/bin/hadoop
+    java.version: 1.8.0_121
+    java.vendor: Oracle Corporation
