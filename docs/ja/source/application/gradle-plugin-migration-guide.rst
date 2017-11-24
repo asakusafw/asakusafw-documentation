@@ -97,7 +97,7 @@ Gradleラッパーのアップデート
 
     :help
 
-    Welcome to Gradle 3.1.
+    Welcome to Gradle 4.3.1.
     ...
 
 ..  attention::

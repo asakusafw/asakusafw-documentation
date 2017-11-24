@@ -2,9 +2,6 @@
 対応プラットフォーム
 ====================
 
-..  todo::
-    バージョン 0.10.0 向けに更新予定
-
 Hadoopディストリビューション
 ============================
 
@@ -18,20 +15,20 @@ Asakusa Framework は、以下のHadoopディストリビューションと組�
       - Version
       - OS
     * - Hortonworks Data Platform
-      - 2.5.0
-      - CentOS 7 (7.2)
+      - 2.6.2
+      - CentOS 7.4
     * - MapR
-      - 5.2.0 [#]_
-      - Red Hat Enterprise Linux 7.2
+      - 5.2.2 [#]_
+      - CentOS 7.3
     * - CDH
-      - 5.9.0 [#]_
-      - CentOS 7 (7.2)
+      - 5.13.0 [#]_
+      - CentOS 7.2
     * - Amazon EMR
-      - 5.4.0
-      - Amazon Linux 2016.09 based
+      - 5.9.0
+      - Amazon Linux 2017.09 based
     * - Microsoft Azure HDInsight
-      - 3.5
-      - Ubuntu 16.04.4
+      - 3.6
+      - Ubuntu 16.04.3
 
 ..  [#] MapReduce Version 1 (MRv1) には対応していません。
 ..  [#] MapReduce Version 1 (MRv1) には対応していません。
@@ -50,25 +47,25 @@ Asakusa Frameworkを利用したバッチアプリケーションの開発環境
       - Version
     * - OS
       - Ubuntu Desktop
-      - 16.04
+      - 16.04.3
     * - OS
       - Windows
-      - 7(SP1) / 10
+      - 10 (1709)
     * - OS
       - MacOSX [#]_
-      - 10.11
+      - 10.13
     * - Java
       - JDK [#]_ [#]_
-      - 1.8.0_121
+      - 1.8.0_151
     * - ビルドツール
       - Gradle [#]_
-      - 3.4.1
+      - 4.3.1
     * - IDE
       - Eclipse IDE for Java Developers
-      - 4.6.3
+      - 4.7.1a
     * - IDE
       - IntelliJ IDEA Community Edition [#]_
-      - 2017.1
+      - 2017.2.6
 
 ..  [#] MacOSX上では基本的な動作のみ検証しています。
 ..  [#] JREでは一部の機能が動作しません。必ずJDKを使用してください。

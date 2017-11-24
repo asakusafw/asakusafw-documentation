@@ -45,11 +45,6 @@ Asakusa DSL
 ..  attention::
     Direct I/OやWindGateでHadoopの機能を利用するよう設定した場合は、Hadoopが動作する環境が併せて必要になります。
 
-..  note::
-    Asakusa on Spark バージョン 0.3系およびそれ以前のバージョンでは、Direct I/Oの出力処理にMapReduceを利用するためMapReduceの実行環境が合わせて必要でした。
-
-    Asakusa on Spark バージョン 0.4.0 ( Asakusa Framework バージョン 0.9.0 ) からはDirect I/Oの出力処理もSpark上で実行するようになったため、MapReduceの実行環境は必須ではなくなりました。
-
 ..  _spark-target-platform:
 
 対応プラットフォーム
@@ -58,17 +53,10 @@ Asakusa DSL
 Spark
 -----
 
-本ドキュメントのバージョンでは、Spark 2.1.0 で動作を検証しています。
-
-また、Sparkの動作モードとして、YARN cluster mode、および YARN client modeで動作を確認しています。
+本バージョンのAsakusa on Sparkは、Spark 2.2.0 で動作を検証しています。
 
 ..  attention::
-    Asakusa on Spark バージョン 0.4.0 ( Asakusa Framework バージョン 0.9.0 ) 以降は、 Spark 1.6.x 以前のバージョンでは動作しません。
-
-..  seealso::
-    SparkのYARN上での動作モードについては、Sparkのドキュメント `Running Spark on YARN`_ を参照してください。
-
-..  _`Running Spark on YARN`: https://spark.apache.org/docs/latest/running-on-yarn.html
+    本バージョンのAsakusa on Sparkは、 Spark 1.6.x 以前のバージョンでは動作しません。
 
 Hadoopディストリビューション
 ----------------------------
