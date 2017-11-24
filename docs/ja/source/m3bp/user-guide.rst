@@ -74,13 +74,6 @@ Asakusa DSL
     上記の構成は、Red Hat Enterprise Linux 7.2 (またはCentOS 7.2などのクローン)を想定しています。
     これらのディストリビューションを利用している場合、標準のパッケージ管理ツールで上記の一部を導入できます。
 
-..  attention::
-    WindGateなどのDirect I/O **以外** の外部連携機能を利用する場合には、実行環境に ``hadoop`` コマンドの導入が必要です。
-    詳しくはそれぞれのドキュメントを参照してください。
-
-    * :doc:`../directio/index`
-    * :doc:`../windgate/index`
-
 ..  [#] https://www.open-mpi.org/projects/hwloc/
 
 Hadoopディストリビューション
