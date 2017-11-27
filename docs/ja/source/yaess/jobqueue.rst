@@ -2,8 +2,8 @@
 YAESS JobQueue
 ==============
 
-..  attention::
-    Asakusa Framework バージョン |version| において、YAESS JobQueueの利用は非推奨となっています。
+..  deprecated::
+    本バージョンでは、 YAESS JobQueueの利用は非推奨となっています。
 
 この文書では、シンプルなHadoopジョブの実行を制御するJobQueue(JobQueueサーバーおよび、それをYAESSと連携して利用するJobQueueクライアントプラグイン ``asakusa-yaess-jobqueue`` )の利用方法について解説します。
 

@@ -71,7 +71,7 @@ Asakusa Frameworkを利用したバッチアプリケーションの開発環境
 ..  [#] JREでは一部の機能が動作しません。必ずJDKを使用してください。
 ..  [#] 開発環境に対するJavaのセットアップについては、 :doc:`../application/using-jdk` を参照してください。
 ..  [#] Gradleの利用については、 :doc:`../application/gradle-plugin` を参照してください。
-..  [#] IntelliJ IDEAの利用は試験的機能として提供しています。詳しくは :doc:`../sandbox/intellij-idea` を参照してください。
+..  [#] IntelliJ IDEAの利用は試験的機能として提供しています。詳しくは :doc:`../application/intellij-idea` を参照してください。
 
 WindGate
 ========

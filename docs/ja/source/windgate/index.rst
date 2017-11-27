@@ -36,3 +36,4 @@ DBMS固有の機能に依存せず、標準SQL/JDBCインターフェースの�
     user-guide
     log-table
     developer-guide
+    windgate-tsv

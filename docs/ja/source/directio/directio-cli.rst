@@ -4,7 +4,7 @@ Direct I/O CLI ユーザーガイド
 
 この文書では、Direct I/O CLI ( :program:`directio` コマンド ) の利用方法について説明します。
 
-..  attention::
+..  experimental::
     Asakusa Framework バージョン |version| では、Direct I/O CLIは試験的機能として提供しています。
 
 セットアップ

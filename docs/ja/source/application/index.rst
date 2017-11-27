@@ -33,17 +33,7 @@ Asakusa Frameworkの開発環境(OSやAsakusa Frameworkが利用するソフト�
 特定のプラットフォームでAsakusa Frameworkを利用することに関するドキュメントです。
 
 * :doc:`using-jdk`
-
-非推奨機能
-==========
-
-Asakusa Framework バージョン |version| において、以下のドキュメントで説明する機能は非推奨となっています。
-
-* :doc:`gradle-plugin-deprecated`
-
-..  attention::
-    非推奨となった機能のうち、その多くは、現在のバージョンで代替となる推奨機能が提供されています。
-    詳しくは各ドキュメント内の説明を参照してください。
+* :doc:`intellij-idea`
 
 関連するドキュメント
 ====================
@@ -60,4 +50,5 @@ Asakusa Framework バージョン |version| において、以下のドキュメ
     gradle-plugin-v08-changes
     previous-migration-guide
     using-jdk
+    intellij-idea
     gradle-plugin-deprecated

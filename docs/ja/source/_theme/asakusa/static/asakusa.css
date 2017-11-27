@@ -47,3 +47,11 @@
 div.attention p.admonition-title {
   background-color: #EE9816;
 }
+
+div.experimental p.admonition-title {
+  background-color: #EE9816;
+}
+
+div.deprecated p.admonition-title {
+  background-color: #EE9816;
+}

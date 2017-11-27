@@ -39,6 +39,7 @@ Asakusa Frameworkの外部で作成されたシーケンスファイルを利用
     start-guide
     user-guide
     csv-format
+    directio-tsv
     formatted-text
     directio-line
     sequencefile-format
