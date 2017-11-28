@@ -152,4 +152,4 @@ Asakusa DSLのジョブフローについては、外部システムとの連携
 
 運用環境の構築が完了したら、バッチアプリケーションを実行してみましょう。
 
-:doc:`../yaess/start-guide` には、Asakusa Frameworkが提供するバッチ実行ツールの基本的な説明が記載されています。
+:doc:`../cli/user-guide` や :doc:`../yaess/start-guide` には、Asakusa Frameworkが提供するバッチ実行ツールの基本的な説明が記載されています。
