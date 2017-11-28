@@ -542,13 +542,13 @@ IntelliJ IDEAの利用
 
 Asakusa FrameworkのアプリケーションプロジェクトはIntelliJ IDEAのGradleプロジェクトとして利用することもできます。
 
-詳しくは、 :doc:`../sandbox/intellij-idea` を参照してください。
+詳しくは、 :doc:`intellij-idea` を参照してください。
 
 ..  attention::
     Asakusa Framework バージョン |version| では、過去バージョンで提供していた IDEA Pluginの拡張と ``idea`` タスクの利用は非推奨となりました。
     IntelliJ IDEAのバージョンによっては、これらの機能は正しく動作しません。
 
-    IntelliJ IDEAを利用する場合、 :doc:`../sandbox/intellij-idea` のドキュメント内容に従って利用してください。
+    IntelliJ IDEAを利用する場合、 :doc:`intellij-idea` のドキュメント内容に従って利用してください。
 
 .. _framework-organizer-plugin-reference:
 

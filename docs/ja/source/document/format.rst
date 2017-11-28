@@ -16,8 +16,8 @@
     :widths: 1 5
     :header-rows: 1
 
-    * - パス 
-      - 内容 
+    * - パス
+      - 内容
     * - :file:`source/`
       - ドキュメントのソースファイルを格納するディレクトリ
     * - :file:`build/`
@@ -40,8 +40,8 @@
     :widths: 2 5
     :header-rows: 1
 
-    * - パス 
-      - 内容 
+    * - パス
+      - 内容
     * - :file:`_static`
       - 静的ファイルを配置するディレクトリ
     * - :file:`conf.py`
@@ -99,9 +99,6 @@
     * - :file:`product/`
       - プロダクトについて
       - ライセンス条項やFAQ、対応プラットフォーム等
-    * - :file:`sandbox/`
-      - Sandbox
-      - Sandboxプロジェクト
     * - :file:`documentation/`
       - Documentation
       - ドキュメントの書き方等 (内部向け)
