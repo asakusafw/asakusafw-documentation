@@ -12,16 +12,18 @@ Asakusa Frameworkは分散処理技術を活かしたバッチアプリケーシ
 
 Asakusa Frameworkの適用事例などについてはコミュニティサイト (http://asakusafw.com) も参考にしてください。
 
+ドキュメント
+============
+
 Asakusa Framework入門
-=====================
+---------------------
 
 * :doc:`introduction/overview`
 * :doc:`introduction/start-guide`
 * :doc:`introduction/next-step`
-* :basic-tutorial:`Asakusa Framework チュートリアル <index.html>`
 
-ドキュメント
-============
+コンポーネント
+--------------
 
 * :doc:`dmdl/index`
 * :doc:`dsl/index`
@@ -38,7 +40,7 @@ Asakusa Framework入門
 * :doc:`mapreduce/index`
 
 プロダクトについて
-==================
+------------------
 
 * :doc:`release-notes`
 * :doc:`changelogs`
@@ -48,11 +50,16 @@ Asakusa Framework入門
 * :doc:`product/license`
 * :doc:`contribution`
 
+チュートリアル
+==============
+
+* :basic-tutorial:`Asakusa Framework チュートリアル <index.html>`
+
 関連プロダクト
 ==============
 
 * :jinrikisha:`Jinrikisha (人力車) - Asakusa Framework Starter Package - <index.html>`
-
+* :jinrikisha:`Shafu (車夫) - Asakusa Gradle Plug-in Helper for Eclipse - <shafu.html>`
 
 リソース
 ========
