@@ -8,6 +8,7 @@ Asakusa Frameworkのプロダクト情報に関するドキュメントです。
     :maxdepth: 1
 
     target-platform
-    road-map
+    experimental
+    deprecated
     license
 

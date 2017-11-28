@@ -32,7 +32,6 @@ Asakusa Framework入門
 * :doc:`cli/index`
 * :doc:`application/index`
 * :doc:`administration/index`
-* :doc:`sandbox/index`
 * :doc:`spark/index`
 * :doc:`m3bp/index`
 * :doc:`vanilla/index`
@@ -43,10 +42,11 @@ Asakusa Framework入門
 
 * :doc:`release-notes`
 * :doc:`changelogs`
-* :doc:`contribution`
 * :doc:`product/target-platform`
-* :doc:`product/road-map`
+* :doc:`product/experimental`
+* :doc:`product/deprecated`
 * :doc:`product/license`
+* :doc:`contribution`
 
 関連プロダクト
 ==============

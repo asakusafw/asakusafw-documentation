@@ -4,11 +4,11 @@ Direct I/O Hive
 
 この文書では、Direct I/Oを使って `Apache Hive <https://hive.apache.org/>`_ （以下「Hive」）が対応するカラムナフォーマットのファイルを読み書きする方法について説明します。
 
-..  attention::
+..  experimental::
     Asakusa Framework バージョン |version| では、Direct I/O のHive連携機能は試験的機能として提供しています。
 
 ..  seealso::
-    Hiveの操作も含めたアプリケーション開発の全体の流れについては、 :doc:`../sandbox/asakusa-with-hive` も参照にしてください。
+    Hiveの操作も含めたアプリケーション開発の全体の流れについては、 :doc:`../administration/asakusa-with-hive` も参照にしてください。
 
 Hive連携モジュールの利用方法
 ============================

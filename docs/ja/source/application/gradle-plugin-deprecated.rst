@@ -2,16 +2,9 @@
 Asakusa Gradle Plugin:非推奨機能
 ================================
 
-この文書では、 :doc:`gradle-plugin` で提供する機能のうち、
-Asakusa Framework バージョン |version| 時点で
-非推奨となっっている機能の説明をまとめています。
-
-ここで紹介する機能の多くは
-バージョン |version| では正常に動作しますが、
-将来のバージョンでこれらの機能が使用できなくなる可能性があります。
-
-また、いくつかの機能はすでに使用できなくなっています。
-そのような機能については個別に注意書きで説明しています。
+..  deprecated::
+    本書「Asakusa Gradle Plugin:非推奨機能」では、Asakusa Framework バージョン |version| で非推奨となっている Asakusa Gradle Plugin の機能をまとめています。
+    本書に記載する機能は、いくつかの制約の元で動作するか、すでに使用できなくなっています。
 
 基本的なプラグインの使用方法
 ============================
@@ -20,12 +13,8 @@ Asakusa Frameworkのデプロイメントアーカイブ生成
 -----------------------------------------------
 
 ..  attention::
-    :doc:`gradle-plugin` では ``assembleAsakusafw`` の代わりに ``assemble`` タスクの利用を紹介しています。
-    バージョン |version| では 標準設定の状態で ``assemble`` タスクを実行すると、
-    デプロイメントアーカイブが生成され、バッチアプリケーションが同梱されるようになっています。
-
-    ``assembleAsakusafw`` タスクは
-    バージョン |version| でも以前のバージョンと同様に使用することができます。
+    バージョン |version| では、ここで紹介する ``assembleAsakusafw`` タスクの代わりに ``assemble`` タスクを利用してください。
+    またデプロイメント構成の編集については、ここで紹介する方法の代わりに ``asakusafwOrganizer`` ブロックで定義してください。
 
 Asakusa Frameworkを運用環境にデプロイするためのデプロイメントアーカイブを生成します。
 
@@ -38,14 +27,6 @@ Asakusa Frameworkを運用環境にデプロイするためのデプロイメン
 ``assembleAsakusafw`` タスクを実行すると、 ``build`` 配下に  ``asakusafw-${asakusafwVersion}.tar.gz`` という名前でデプロイメントアーカイブが作成されます。このアーカイブには Direct I/O , WindGateを含むAsakusa Framework実行環境一式が含まれます。
 
 このデプロイメントアーカイブは運用環境上の$ASAKUSA_HOME配下に展開してデプロイします。より詳しくは、 :doc:`../administration/index` のデプロイメントガイドなどを参照してください。
-
-..  attention::
-    以降で説明する、デプロイメントアーカイブ構築のカスタマイズ方法について、
-    バージョン 0.7.0 以降では、 ``attach`` から始まる各タスクを組み合わせる方式から
-    ``build.gradle`` 内の ``asakusafwOrganizer`` ブロックで
-    デプロイメント構成を定義する方法を推奨するよう変更しています。
-
-    詳しくは、 :doc:`../administration/deployment-guide` を参照してください。
 
 バッチアプリケーションの同梱
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -134,7 +115,7 @@ Asakusa Frameworkでは、標準のデプロイメントアーカイブに含ま
 --------------------------
 
 ..  attention::
-    Asakusa Frameworkのバージョン 0.10.0 より、 :program:`testRunBatchapp` タスクは非推奨となりました。
+    Asakusa Framework バージョン 0.10.0 より、 :program:`testRunBatchapp` タスクは非推奨となりました。
 
 :program:`testRunBatchapp` タスクはインテグレーションテスト用のテストAPIであるバッチテストランナーをGradleタスクとして実行することができます。
 このタスクを利用するには、プロジェクトに対してAsakusa on MapReduce Plugin ( ``asakusafw-mapreduce`` ) を有効にする必要があります。
@@ -173,11 +154,11 @@ Batch Application Plugin
 
 Batch Application Plugin は、以下のタスクをプロジェクトに追加します。
 
-..  attention::
-    以下では非推奨となったタスクをあげています。
+..  warning::
+    バージョン 0.8.0 以降、ThunderGate関連の設定は利用できません。
 
 ..  warning::
-    バージョン 0.9.0 以降では、以下のタスクは削除されました。
+    バージョン 0.9.0 以降、以下のタスクは利用できません。
 
     * ``summarizeYaessJob``
 
@@ -207,9 +188,6 @@ Batch Application Plugin は、以下のタスクをプロジェクトに追加�
 規約プロパティ
 ~~~~~~~~~~~~~~
 
-..  attention::
-    以下では非推奨となった規約プロパティをあげています。
-
 Batch Application Pluginの規約プロパティはビルドスクリプトから 参照名 ``asakusafw`` でアクセスできます [#]_ 。
 この規約オブジェクトは以下のプロパティを持ちます。
 
@@ -233,12 +211,7 @@ Batch Application Pluginの規約プロパティはビルドスクリプトか�
 ~~~~~~~~~~~~~~~~~~~~
 
 ..  attention::
-    バージョン 0.9.0 より、 Asakusa Frameworkバージョンの指定 は無効になりました。
-
-..  attention::
-    バージョン 0.8.1 より、 Asakusa Frameworkバージョンの指定 は非推奨機能に変更されました。
-    :doc:`gradle-plugin-v08-changes` - :ref:`gradle-plugin-v08-specify-asakusafw-version` の説明を確認の上、
-    `asakusafwVersion`` の定義をビルドスクリプトから削除することを強く推奨します。
+    バージョン 0.9.0 以降、 Asakusa Frameworkバージョンの指定は無効になりました。
 
 ``asakusafwVersion`` はアプリケーションプロジェクトで使用するAsakusa Frameworkのバージョンを表します。
 
@@ -255,7 +228,7 @@ DSLコンパイラプロパティ
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  attention::
-    バージョン 0.8.0 より、 ``compiler`` ブロックの指定は非推奨となりました。
+    バージョン 0.8.0 以降、 ``compiler`` ブロックの指定は非推奨となりました。
     MapReduceコンパイラに対する設定は、後述の MapReduceプロパティ を使用してください。
 
 ..  attention::
@@ -377,12 +350,12 @@ Framework Organizer Plugin
 Framework Organizer Plugin は、以下のタスクを定義します。
 
 ..  warning::
-    バージョン 0.9.0 以降では、以下のタスクは削除されました。
+    バージョン 0.9.0 以降、以下のタスクは削除されました。
 
     * ``attachComponentDevelopment``
 
 ..  attention::
-    バージョン 0.7.0 以降では、 ``attach`` から始まる各タスクの使用は非推奨となりました。
+    バージョン 0.7.0 以降、 ``attach`` から始まる各タスクの使用は非推奨となりました。
     ``attach`` から始まるタスクはFramework Organizer Pluginが内部で生成し利用します。
 
     デプロイメントアーカイブ構築のカスタマイズ方法について、
@@ -404,9 +377,6 @@ Framework Organizer Plugin は、以下のタスクを定義します。
     バージョン 0.7.0 以降ではプロファイル定義による構成機能を提供しています。
 
     詳しくは、 :doc:`../administration/deployment-guide` や :doc:`gradle-plugin-reference` を参照してください。
-
-..  attention::
-    以下では非推奨となったタスク、及び削除されたタスクをあげています。
 
 ..  list-table:: Framework Organizer Plugin - タスク
     :widths: 152 121 48 131
@@ -492,9 +462,6 @@ Framework Organizer Plugin は、以下のタスクを定義します。
 
 規約プロパティ
 ~~~~~~~~~~~~~~
-
-..  attention::
-    以下では非推奨となった規約プロパティをあげています。
 
 Framework Organizer Plugin の規約プロパティはビルドスクリプトから 参照名  ``asakusafwOrganizer`` でアクセスできます [#]_ 。
 この規約オブジェクトは以下のプロパティを持ちます。

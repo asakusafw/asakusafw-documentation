@@ -26,11 +26,15 @@ sys.path.append(os.path.abspath('_exts'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'sphinx.ext.extlinks', 'asakusafw.javadoclinks']
+extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'sphinx.ext.extlinks', 'asakusafw.javadoclinks', 'asakusafw.experimental', 'asakusafw.deprecated']
 
 # -- EXTENSIONS ----------------------------------------------------------------
 [extensions]
 todo_include_todos = True
+experimental_include_experimentals = True
+experimental_link_only = True
+deprecated_include_deprecateds = True
+deprecated_link_only = True
 
 extlinks = {
     'milestone-asakusafw': ("https://github.com/asakusafw/asakusafw/issues?&q=milestone:%s", 'asakusafw milestone:'),
@@ -63,6 +67,8 @@ rst_prolog = u"""
 ..  |M3BP_COMPILER| replace:: DSL Compiler for M\ :sup:`3`\ BP
 ..  |VERSION_UP| unicode:: U+2191
 """
+
+suppress_warnings = ['app.add_directive']
 
 # ------------------------------------------------------------------------------
 

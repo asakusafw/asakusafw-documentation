@@ -542,21 +542,6 @@ Asakusa Gradle Pluginを適用したアプリケーションプロジェクト�
 ..  seealso::
     ``sdk`` に対して設定可能な全てのプロパティについては :doc:`gradle-plugin-reference` - :ref:`batch-application-plugin-reference` を参照してください。
 
-コンパイラ拡張ライブラリ
-------------------------
-
-アプリケーションSDKライブラリの他に、Asakusa Frameworkでは :doc:`試験的機能 <../sandbox/index>` として提供されるコンパイラ拡張ライブラリがいくつか存在します。
-
-これらの機能を追加するには、各ライブラリの利用方法にしたがってビルドスクリプトの ``dependencies`` ブロックに指定します。
-
-以下の例では、プロジェクトテンプレートに含まれるビルドスクリプトに対して :doc:`../sandbox/directio-tsv` を利用するためのコンパイラ拡張ライブラリ ``com.asakusafw.sandbox:asakusa-directio-dmdl-ext`` を追加しています。
-
-..  literalinclude:: gradle-attachment/custom-build.gradle
-    :language: groovy
-    :caption: build.gradle
-    :name: build.gradle-gradle-plugin-7
-    :lines: 35-37
-
 .. _dependency-library-gradle-plugin:
 
 ユーザー演算子で使用するライブラリの追加
@@ -772,8 +757,8 @@ Asakusa Gradle Pluginでは、特定の環境向けに個別にデプロイメ�
 テストツールタスクの実行
 ------------------------
 
-..  attention::
-    Asakusa Frameworkのバージョン |version| では、 ``TestTookTask`` は試験的機能として提供しています。
+..  experimental::
+    Asakusa Framework バージョン |version| では、 ``TestTookTask`` は試験的機能として提供しています。
 
 ``TestToolTask`` [#]_ を使うことで、テストドライバーやバッチテストランナーが持つ機能を組み合わせてGradleのタスクとして実行することができます。
 

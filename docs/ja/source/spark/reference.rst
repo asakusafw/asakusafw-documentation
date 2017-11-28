@@ -326,8 +326,8 @@ Asakusa DSL Compiler for Sparkで利用可能なコンパイラプロパティ�
 
     既定値: ``true``
 
-..  attention::
-    Asakusa Framework バージョン 0.10.0 より、 ``spark.input.direct`` および ``spark.output.direct`` を ``false`` に指定した利用は非推奨となりました。
+..  deprecated::
+    Asakusa Framework バージョン 0.10.0 以降、 ``spark.input.direct`` および ``spark.output.direct`` を ``false`` に指定した利用は非推奨となりました。
 
     ``spark.input.direct`` , ``spark.output.direct`` のいずれかの値を ``false`` に設定した場合、
     YAESSによるバッチアプリケーション実行にはHadoopコマンドを利用できる環境が必要です。

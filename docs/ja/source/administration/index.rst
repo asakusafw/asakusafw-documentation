@@ -17,6 +17,14 @@ Asakusa FrameworkとバッチアプリケーションをHadoopクラスターな
 
 * :doc:`migration-guide`
 
+プラットフォーム関連
+====================
+
+特定のプラットフォームでAsakusa Frameworkを利用することに関するドキュメントです。
+
+* :doc:`asakusa-on-emr`
+* :doc:`asakusa-with-hive`
+
 運用ツールの利用
 ================
 
@@ -35,4 +43,6 @@ Asakusa Frameworkが提供する運用ツールに関するドキュメントで
     configure-hadoop-parameters
     deployment-runtime-plugins
     migration-guide
+    asakusa-on-emr
+    asakusa-with-hive
     utility-tool-user-guide

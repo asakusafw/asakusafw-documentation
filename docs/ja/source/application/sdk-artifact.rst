@@ -4,8 +4,8 @@
 SDKアーティファクト利用ガイド
 =============================
 
-..  attention::
-    Asakusa Frameworkのバージョン ``0.9.0`` 以降、本機能の利用は非推奨となりました。
+..  warning::
+    Asakusa Frameworkのバージョン ``0.10.0`` 以降、SDKアーティファクトは利用できません。
     SDKアーティファクトの代わりに、 :doc:`../application/gradle-plugin` で説明している :ref:`gradle-plugin-dependency-management` に従ってアプリケーションプロジェクトを設定してください。
 
     またバージョン0.8系以前のプロジェクトのマイグレーション方法については、 :doc:`gradle-plugin-v09-changes` を参照してください。
