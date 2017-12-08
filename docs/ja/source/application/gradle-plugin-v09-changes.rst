@@ -43,7 +43,7 @@ Asakusa Gradle Pluginを利用する場合、これまではアプリケーシ�
             maven { url 'http://asakusafw.s3.amazonaws.com/maven/releases' }
         }
         dependencies {
-            classpath group: 'com.asakusafw.gradle', name: 'asakusa-distribution', version: '0.10.0'
+            classpath group: 'com.asakusafw.gradle', name: 'asakusa-distribution', version: '0.10.1'
         }
     }
 
