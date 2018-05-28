@@ -332,7 +332,7 @@ Java VMの設定
 |M3BP_FEATURE|\ 実行用のJVMプロセスを起動するJavaコマンドは、環境変数 ``JAVA_CMD`` で設定することができます。
 ``JAVA_CMD`` が未設定の場合、 ``PATH`` 環境変数に含まれる ``java`` コマンドが使用されます。
 
-`Hadoopとの連携`_ を設定した場合、Asakusa Vanilla実行用のJVMプロセスを起動するコマンドには ``hadoop`` コマンドが使用されます。
+`Hadoopとの連携`_ を設定した場合、\ |M3BP_FEATURE|\実行用のJVMプロセスを起動するコマンドには ``hadoop`` コマンドが使用されます。
 この場合に利用される ``hadoop`` コマンドの検索方法は `Hadoopとの連携`_ の説明を参照してください。
 
 環境変数 ``ASAKUSA_M3BP_LAUNCHER`` は実行コマンドの先頭に任意のコマンド文字列を追加します。
