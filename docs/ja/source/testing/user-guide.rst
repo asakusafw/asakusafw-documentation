@@ -734,12 +734,12 @@ Flow DSLのフロー記述メソッドと同様の形式で複数の演算子を
     @Test
     public void testWithTemporaryFlow() {
         // 入出力の定義
-        FlowPartTester tester = new FlowTester(getClass());
-        In<Hoge> in0 = tester.input(Hoge.class)
+        FlowPartTester tester = new FlowPartTester(getClass());
+        In<Hoge> in0 = tester.input("hoge", Hoge.class)
             .prepare("path/to/input0.xlsx");
-        In<Foo> in1 = tester.input(Foo.class)
+        In<Foo> in1 = tester.input("foo", Foo.class)
             .prepare("path/to/input1.xlsx");
-        Out<Bar> out = tester.output(Bar.class)
+        Out<Bar> out = tester.output("bar", Bar.class)
             .verify(...);
 
         // テスト用の一時的なデータフローを構築して実行
