@@ -319,6 +319,13 @@ Flow DSLでビューAPIを使用した演算子を利用するデータフロー
 
 また、``GroupView<T>`` に対応するオブジェクトを取得するには、 ``DataLoader`` オブジェクトに対して、 ``group`` メソッドでグループを指定し、このメソッドが返す ``GroupLoader`` [#]_ オブジェクトに対して ``asView`` メソッドを呼び出します。 整列順序を指定する場合は ``order`` メソッドを使用します。
 
+..  hint::
+    ビューに対応するテストデータは以下のようなものを指定することができます。これらはいずれも ``OperatorTestEnvironment`` の ``loader`` メソッドの引数として指定します。
+
+    * テストデータ定義シート(Excelファイル)の **ファイルパス#シート名** を指定 - 上記コード例の方法です
+    * ``Iterable`` ( ``List`` ) を指定 - 少量のデータを指定したり、テストデータをテストメソッド内で動的に生成するといった場合に利用できます
+    * Direct I/Oのデータフォーマットに対応するファイル ( CSVファイルなど) の情報を指定 - 実装例は :doc:`../testing/user-guide` - :ref:`directio-testdriver-dataformat` を参照してください
+
 詳しくは、各APIのJavaDocを参照してください。
 
 ..  [#] :asakusafw-javadoc:`com.asakusafw.testdriver.OperatorTestEnvironment`
