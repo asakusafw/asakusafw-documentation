@@ -15,7 +15,7 @@ Asakusa Framework は、以下のHadoopディストリビューションと組�
       - Version
       - OS
     * - Hortonworks Data Platform
-      - 2.6.2
+      - 2.6.5
       - CentOS 7.4
     * - MapR
       - 5.2.2 [#]_
@@ -59,7 +59,7 @@ Asakusa Frameworkを利用したバッチアプリケーションの開発環境
       - 1.8.0_151
     * - ビルドツール
       - Gradle [#]_
-      - 4.3.1
+      - 4.7
     * - IDE
       - Eclipse IDE for Java Developers
       - 4.7.1a
