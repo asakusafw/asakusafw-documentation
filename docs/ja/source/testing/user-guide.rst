@@ -753,6 +753,30 @@ Flow DSLのフロー記述メソッドと同様の形式で複数の演算子を
 
 .. _testing-userguide-integration-test:
 
+Windows用の実行ライブラリ
+-------------------------
+
+Windows上でテストドライバを利用する場合、環境にVisual C++ 2010 ランタイム ライブラリがインストールされている必要があります。
+
+環境にこのライブラリがインストールされていない場合、以下のサイトなどからライブラリを入手し、環境にインストールしてください。
+
+*  `Microsoft Visual C++ 2010 再頒布可能パッケージ (x64) <https://www.microsoft.com/ja-jp/download/details.aspx?id=14632>`_
+
+..  attention::
+    Visual C++ 2010 ランタイム ライブラリがインストールされていない環境上でテストを実行すると、
+    以下のようなエラーメッセージが表示されテストの実行が失敗します。
+
+    ..  code-block:: none
+
+        java.lang.IllegalStateException: ExitCodeException exitCode=-1073741515:
+        ...
+        Caused by:
+                ExitCodeException exitCode=-1073741515:
+
+..  tip::
+    Visual C++ 2010 ランタイム ライブラリは様々なソフトウェアに含まれるため、
+    既にインストール済みになっている場合も多くあります。
+
 インテグレーションテスト
 ========================
 

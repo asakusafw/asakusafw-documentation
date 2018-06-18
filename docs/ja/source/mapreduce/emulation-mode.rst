@@ -74,30 +74,6 @@ Asakusa Framework バージョン 0.8.0 以降では、:doc:`../introduction/sta
     この方法で設定を行うと、Eclipse上でのみエミュレーションモードが有効になります。
     詳しくは :jinrikisha:`Shafu<shafu.html>` の「設定」の説明を参照してください。
 
-Windows用の実行ライブラリ
--------------------------
-
-Windows上でエミュレーションモードを利用する場合、環境にVisual C++ 2010 ランタイム ライブラリがインストールされている必要があります。
-
-環境にこのライブラリがインストールされていない場合、以下のサイトなどからライブラリを入手し、環境にインストールしてください。
-
-*  `Microsoft Visual C++ 2010 再頒布可能パッケージ (x64) <https://www.microsoft.com/ja-jp/download/details.aspx?id=14632>`_
-
-..  tip::
-    Visual C++ 2010 ランタイム ライブラリはJavaなど様々なソフトウェアに含まれています。
-    環境に対する各ソフトウェアのインストール構成によっては、既にこのライブラリが利用可能になっているかもしれません。
-
-..  attention::
-    Visual C++ 2010 ランタイム ライブラリがインストールされていない環境上でエミュレーションモードを有効にしてテストを実行すると、
-    以下のようなエラーメッセージが表示されテストの実行が失敗します。
-
-    ..  code-block:: none
-
-        java.lang.IllegalStateException: ExitCodeException exitCode=-1073741515:
-        ...
-        Caused by:
-                ExitCodeException exitCode=-1073741515:
-
 Gradle上でのテストドライバー実行
 --------------------------------
 
