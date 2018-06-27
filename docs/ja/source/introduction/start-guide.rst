@@ -160,11 +160,11 @@ Eclipse上で環境変数 ``ASAKUSA_HOME`` が有効になっていることを�
 
     * - プロジェクトテンプレート
       - 説明
-    * - `asakusa-spark-template-0.10.1.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.1.tar.gz>`_
+    * - `asakusa-spark-template-0.10.2.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.2.tar.gz>`_
       - :doc:`../spark/index` を利用するプロジェクトテンプレート
-    * - `asakusa-m3bp-template-0.10.1.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.1.tar.gz>`_
+    * - `asakusa-m3bp-template-0.10.2.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.2.tar.gz>`_
       - :doc:`../m3bp/index` を利用するプロジェクトテンプレート
-    * - `asakusa-mapreduce-template-0.10.1.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-mapreduce-template-0.10.1.tar.gz>`_
+    * - `asakusa-mapreduce-template-0.10.2.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-mapreduce-template-0.10.2.tar.gz>`_
       - :doc:`../mapreduce/index` を利用するプロジェクトテンプレート
 
 コマンドライン上から作成する場合、上記のURLに公開されているプロジェクトテンプレートのアーカイブを展開します。
@@ -173,8 +173,8 @@ Eclipse上で環境変数 ``ASAKUSA_HOME`` が有効になっていることを�
 ..  code-block:: sh
 
     cd <work-dir>
-    curl -OL http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.1.tar.gz
-    tar xf asakusa-spark-template-0.10.1.tar.gz
+    curl -OL http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.2.tar.gz
+    tar xf asakusa-spark-template-0.10.2.tar.gz
     mv asakusa-spark-template my-batchapp
     cd my-batchapp
 
@@ -269,9 +269,9 @@ Direct I/Oを利用して、Hadoopファイルシステム上のCSVファイル�
 ..  code-block:: sh
 
     cd <work-dir>
-    curl -OL https://github.com/asakusafw/asakusafw-examples/archive/0.10.1.tar.gz
-    tar xf 0.10.1.tar.gz
-    cd asakusafw-examples-0.10.1/example-basic-spark
+    curl -OL https://github.com/asakusafw/asakusafw-examples/archive/0.10.2.tar.gz
+    tar xf 0.10.2.tar.gz
+    cd asakusafw-examples-0.10.2/example-basic-spark
 
 Shafuを導入した開発環境では、オンライン上に公開されているAsakusa Frameworkのプロジェクトテンプレートカタログを利用して、サンプルアプリケーションのプロジェクトをEclipse上に取り込みます。
 

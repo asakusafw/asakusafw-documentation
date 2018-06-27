@@ -145,7 +145,7 @@ Hadoopとの連携方法は、 `Hadoopとの連携`_ を参照してください
 
 |M3BP_FEATURE|\ を利用する構成を持つアプリケーション開発用のプロジェクトテンプレートは、以下リンクからダウンロードします。
 
-* `asakusa-m3bp-template-0.10.1.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.1.tar.gz>`_
+* `asakusa-m3bp-template-0.10.2.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.2.tar.gz>`_
 
 ..  seealso::
     プロジェクトテンプレートの構成や利用方法については、 :doc:`../application/gradle-plugin` を参照してください。
