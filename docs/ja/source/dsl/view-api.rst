@@ -174,8 +174,8 @@
 
     @MasterJoinUpdate
     public void masterJoinWithGroupView(
-            @Key(group = "store_code") SalesDetail sales,
             @Key(group = "store_code") StoreInfo store,
+            @Key(group = "store_code") SalesDetail sales,
             @Key(group = "store_code") GroupView<StoreInfo> viewStoreA,
             @Key(group = "store_code") GroupView<StoreInfo> viewStoreB,
             @Key(group = "store_code") GroupView<StoreInfo> viewStoreC
