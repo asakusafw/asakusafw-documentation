@@ -5,6 +5,40 @@
 Asakusa Frameworkのリリースノートです。
 すべての変更点は :doc:`changelogs` を参照してください。
 
+Release 0.10.2
+==============
+
+(開発中)
+
+`Asakusa Framework 0.10.2 documentation`_
+
+..  _`Asakusa Framework 0.10.2 documentation`: http://docs.asakusafw.com/0.10.2/release/ja/html/index.html
+
+新機能と主な変更点
+------------------
+
+* ビューAPIを以下の演算子に使用した場合に正しくコンパイルされないことがある不具合の修正
+
+  * マスタ確認演算子
+  * マスタ結合演算子
+  * マスタ分岐演算子
+  * マスタつき更新演算子
+* Direct I/O の以下のフォーマットについて、長い文字列を含むデータを入力した場合にパースに失敗することがある不具合の修正
+
+  * :doc:`directio/formatted-text`
+  * :doc:`directio/directio-line`
+  * :doc:`directio/directio-tsv`
+* broadcast joinアルゴリズムやビューAPIを使った結合演算子を含むデータフローが、まれなケースで循環参照を引き起こしコンパイルエラーとなる不具合の修正
+* Shafu バージョン 0.7.0 に対応した :basic-tutorial:`Asakusa Framework チュートリアル <index.html>` と :jinrikisha:`Shafuのドキュメント <shafu.html>` の改訂
+
+その他、細かな機能改善およびバグフィックスが含まれます。
+すべての変更点は :doc:`changelogs` を参照してください。
+
+互換性に関して
+--------------
+
+本リリースでは過去バージョンとの互換性に関する特別な情報はありません。
+
 Release 0.10.1
 ==============
 
