@@ -29,7 +29,8 @@ Release 0.10.2
   * :doc:`directio/directio-line`
   * :doc:`directio/directio-tsv`
 * broadcast joinアルゴリズムやビューAPIを使った結合演算子を含むデータフローが、まれなケースで循環参照を引き起こしコンパイルエラーとなる不具合の修正
-* Shafu バージョン 0.7.0 に対応した :basic-tutorial:`Asakusa Framework チュートリアル <index.html>` と :jinrikisha:`Shafuのドキュメント <shafu.html>` の改訂
+* :doc:`testing/user-guide` 、およびテスト機能に関連する各ドキュメントの整理と改訂
+* :basic-tutorial:`Asakusa Framework チュートリアル <index.html>` と :jinrikisha:`Shafuのドキュメント <shafu.html>` を Shafu バージョン 0.7.0 の機能に合わせて改訂
 
 その他、細かな機能改善およびバグフィックスが含まれます。
 すべての変更点は :doc:`changelogs` を参照してください。
