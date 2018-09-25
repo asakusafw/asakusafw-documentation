@@ -5,7 +5,7 @@ Changelogs
 Release 0.10.2
 ==============
 
-(in development)
+Sep 26, 2018
 
 ..  list-table:: Bundled Components
     :widths: 3 1 6
