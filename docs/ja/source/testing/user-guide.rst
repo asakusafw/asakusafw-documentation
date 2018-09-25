@@ -15,27 +15,27 @@
 
 Operator DSL [#]_ を使って記述した演算子に対するテストの方法は、以下の2種類の方法が提供されています。
 
-* `演算子実装クラスに対するテスト`_
+* `演算子クラスに対するテスト`_
 * `一時的なフロー記述に対するテスト`_
 
 ..  [#] Operator DSLについて詳しくは :doc:`../dsl/user-guide` - :ref:`dsl-userguide-operator-dsl` などを参照してください。
 
 .. _testing-userguide-operator-impl-testing:
 
-演算子実装クラスに対するテスト
-------------------------------
+演算子クラスに対するテスト
+--------------------------
 
 この方法は、演算子のテストを一般的なクラスに対する単体テストと同様の方法で作成します。
 
 このテストでは、演算子クラスに記述した演算子メソッドにテストデータとして用意したデータモデルオブジェクトを渡して実行し、変更されたデータモデルオブジェクトの内容やメソッドの戻り値をJUnitのAPIなどを使って検証します。
 
-ただし、演算子クラスは抽象クラスとして宣言しているため、演算子実装クラス（演算子クラス名の末尾に ``Impl`` を付与したクラスで、Operator DSLコンパイラが自動的に生成する）を代わりにインスタンス化して、そのインスタンスから演算子メソッドを呼び出します。
+演算子クラスは抽象クラスとして宣言しているため、テストメソッド内では演算子実装クラス（演算子クラス名の末尾に ``Impl`` を付与したクラスで、Operator DSLコンパイラが自動的に生成する）のインスタンスから演算子メソッドを呼び出します。
 
 ..  code-block:: java
 
     @Test
     public void testCheckShipment_shipped() {
-        StockOpImpl operator = new StockOpImpl();
+        StockOp operator = new StockOpImpl();
         Shipment shipment = new Shipment();
         shipment.setShippedDate(new DateTime());
         shipment.setCost(100);
@@ -63,6 +63,19 @@ OperatorTestEnvironment
     @Rule
     public OperatorTestEnvironment env = new OperatorTestEnvironment();
 
+
+``OperatorTestEnvironment`` 利用の一例として、演算子クラスのインスタンスを生成する ``newInstance`` の使用例を示します。
+``newInstance`` は指定した演算子クラスに対する実装クラスを返します。
+
+例えば先述のテストメソッド例に対しては、演算子クラスのインスタンス生成部分を以下のように書き換えることができます。
+
+..  code-block:: java
+
+    @Test
+    public void testCheckShipment_shipped() {
+        StockOp operator = env.newInstance(StockOp.class);
+        ...
+
 ..  [#] :asakusafw-javadoc:`com.asakusafw.testdriver.OperatorTestEnvironment`
 ..  [#] ``org.junit.Rule``
 
@@ -81,7 +94,7 @@ OperatorTestEnvironment
 
     @Test
     public void testCutoff_shortage() {
-        StockOpImpl operator = new StockOpImpl();
+        StockOp operator = env.newInstance(StockOp.class);
 
         List<Stock> stocks = Arrays.asList(StockFactory.create(new DateTime(), 0, 100, 10));
         List<Shipment> shipments = Arrays.asList();
@@ -206,7 +219,7 @@ DataLoader
                     "item_info.csv" // (or) new File("src/test/resources/com/example/operator/item_info.csv")
             ).asList();
 
-            CategorySummaryOperator operator = new CategorySummaryOperatorImpl();
+            CategorySummaryOperator operator = env.newInstance(CategorySummaryOperator.class);
             ItemInfo item1 = operator.selectAvailableItem(candidates, sales(1));
             ItemInfo item5 = operator.selectAvailableItem(candidates, sales(5));
             ...
@@ -244,7 +257,7 @@ DataLoader
                     .asList();
 
             for (SalesDetail sales : salesList) {
-                new WithViewOperatorImpl().updateWithView(sales, fooView);
+                env.newInstance(WithViewOperator.class).updateWithView(sales, fooView);
                 ...
             }
         }
@@ -261,7 +274,7 @@ DataLoader
             MockResult<ErrorRecord> error = env.newResult(ErrorRecord.class);
 
             for (SalesDetail sales : salesList) {
-                new WithViewOperatorImpl().extractWithGroupView(sales, fooView, result, error);
+                env.newInstance(WithViewOperator.class).extractWithGroupView(sales, fooView, result, error);
                 ...
             }
         }
@@ -284,7 +297,7 @@ DataLoader
 
 このテストでは、テストドライバーを使って「一時的なフロー記述」（テスト専用のデータフロー）を作成し、そのデータフローにテスト対象の演算子を含めて実行するテストケースを記述します。テストデータのセットアップや実行結果の検証はテストドライバーの機能を利用します。
 
-この方法は `演算子実装クラスに対するテスト`_ と比べ、以下のようなメリットがあります。
+この方法は `演算子クラスに対するテスト`_ と比べ、以下のようなメリットがあります。
 
 * 複数の演算子を組み合わせたテストケースの作成が可能
 * 複雑なテストデータ（入力データ、期待データ、テスト条件）を定義する様々な機能を利用可能
@@ -326,7 +339,7 @@ DataLoader
 一時的なフロー記述を使ったテストのメリットとデメリット
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`一時的なフロー記述に対するテスト`_ は `演算子実装クラスに対するテスト`_ と比べて、一般的には以下のようなメリットやデメリットがあります。
+`一時的なフロー記述に対するテスト`_ は `演算子クラスに対するテスト`_ と比べて、一般的には以下のようなメリットやデメリットがあります。
 これらの点を考慮にいれて、演算子のテスト全体の構成を検討すべきでしょう。
 
 メリット
@@ -353,12 +366,12 @@ DataLoader
 
 * テストケースの実装コスト
 
-  特にシンプルな演算子のテストケースを記述する場合は `演算子実装クラスに対するテスト`_ に比べてテストケースの実装コストが高いでしょう。
+  特にシンプルな演算子のテストケースを記述する場合は `演算子クラスに対するテスト`_ に比べてテストケースの実装コストが高いでしょう。
 
 * テスト実行速度とマシンリソースへの負荷
 
   テストドライバーの実行時には、テストケースに定義したデータフローから実行形式へのコンパイル、入出力データのセットアップなどの処理が行われます。
-  このため、多くの場合 `演算子実装クラスに対するテスト`_ に比べてテストケースの実行に時間がかかり、マシンへの負荷は高くなるでしょう。
+  このため、多くの場合 `演算子クラスに対するテスト`_ に比べてテストケースの実行に時間がかかり、マシンへの負荷は高くなるでしょう。
 
 .. _testing-userguide-dataflow-testing:
 
@@ -793,15 +806,15 @@ Direct I/Oファイルをテストドライバーで使用する
 
 ..  [#]  ``DataFormat`` の実装クラスの作成方法は、 :doc:`../directio/user-guide` - :ref:`directio-create-dataformat` に記載するドキュメントを参照してください
 
-ModelTransformer
-----------------
+入出力データの変換
+------------------
 
 ..  experimental::
-    Asakusa Framework バージョン |version| では、ModelTransformerは試験的機能として提供しています。
+    Asakusa Framework バージョン |version| では、入出力データの変換機能は試験的機能として提供しています。
 
-ModelTransformerは 各 ``Tester`` クラスの ``input.prepare()`` メソッドや ``output.verify()`` メソッドで指定したファイルに対して、そのデータモデルの内容を変換する処理を挿入する機能です。
+各 ``Tester`` クラスの ``input.prepare()`` メソッドや ``output.verify()`` メソッドで指定するテストデータファイルから入出力データを構築する際に、そのデータモデルの内容を変換する処理を挿入することができます。
 
-ModelTransformerを入力データに対して適用するには ``prepare`` メソッドの第二引数( `Direct I/Oファイルをテストドライバーで使用する`_ を使う場合は第三引数)に、期待データに対して適用するには ``verify`` に続いて ``transform`` メソッドで ``ModelTransformer`` インターフェース [#]_ の実装クラス、もしくは変換ロジックを記述したラムダ式を指定します。
+入力データに対してこの変換処理を適用するには ``prepare`` メソッドの第二引数( `Direct I/Oファイルをテストドライバーで使用する`_ を使う場合は第三引数)に、期待データに対して変換処理を適用するには ``verify`` に続いて ``transform`` メソッドに変換ロジックを記述したラムダ式を指定します。
 
 ..  code-block:: java
 
@@ -814,8 +827,6 @@ ModelTransformerを入力データに対して適用するには ``prepare`` メ
             "hoge.xls#rule"
             ).transform(hoge -> hoge.setBarAsString("test")
     );
-
-..  [#] :asakusafw-javadoc:`com.asakusafw.testdriver.core.ModelTransformer`
 
 Javaクラス(オブジェクト)
 ------------------------
@@ -947,7 +958,7 @@ Javaクラス(オブジェクト)
         }
     }
 
-``ModelTester`` を実装したクラスを作成したら、各 ``Tester`` クラスの ``output.verify()`` メソッドの第三引数にインスタンスを指定します [#]_ 。
+``ModelTester`` を実装したクラスを作成したら、各 ``Tester`` クラスの ``output.verify()`` メソッドの第三引数にそのインスタンスを指定します [#]_ 。
 
 ..  code-block:: java
 
@@ -960,6 +971,9 @@ Javaクラス(オブジェクト)
             .verify("hoge.json", "hoge.xls#rule", new ExampleTester());
         ...
     }
+
+..  hint::
+    ``ModelTester`` のインスタンスを指定する代わりに、比較ロジックを記述したラムダ式を指定することもできます。
 
 テスト条件の拡張は、主にExcelなどで表現しきれない比較を行いたい場合に利用できます。
 比較方法をすべてJavaで記述する場合には `テスト条件をJavaで記述する`_ の方法を参照してください。
@@ -1010,7 +1024,9 @@ Javaクラス(オブジェクト)
     @Test
     public void testExample() {
         BatchTester tester = new BatchTester(getClass());
-        tester.configure("com.asakusafw.message", "Hello, world!");
+        tester.configure(
+            "com.asakusafw.runtime.core.Report.Delegate", "com.example.CustomReportDelegate"
+        );
         ...
     }
 
@@ -1059,6 +1075,14 @@ Javaクラス(オブジェクト)
     テスト結果の検証をスキップするかを設定する。
 
 .. _testing-userguide-debug-analysis:
+
+その他のオプション
+------------------
+
+その他、各 ``Tester`` クラスで利用可能なテストの動作を設定するメソッドは以下の通りです。
+
+``setExtraCompilerOption(String name, String value)``
+    テストドライバー実行時にアプリケーションをコンパイルする際のコンパイラオプションを設定する。
 
 テストのデバッグと実行結果の分析
 ================================
