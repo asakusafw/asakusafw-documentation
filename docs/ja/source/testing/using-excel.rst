@@ -13,99 +13,21 @@ Asakusa Frameworkには、このテストデータを記述するためのExcel�
 ..  seealso::
     DMDLでデータモデルを定義する方法は、 :doc:`../dmdl/index` を参照してください。
 
-コマンドラインインターフェース
+テストデータテンプレートの生成
 ------------------------------
 
-テストデータテンプレートを生成するには、 ``asakusa-test-data-generator`` の :asakusafw-javadoc:`com.asakusafw.testdata.generator.excel.Main` を実行します。
-指定できるオプションは次の通りです。
+テストデータのテンプレートを生成するには、 Gradleを利用してテストデータテンプレート生成ツールを実行します。
+これはGradleの :program:`generateTestbook` タスクで起動するので、プロジェクト内で以下のようにコマンドを実行します。
 
-..  program:: com.asakusafw.testdata.generator.excel.Main
+..  code-block:: sh
 
-..  option:: -format
+    ./gradlew generateTestbook
 
-    出力するテンプレートの形式。
-    種類については `formatオプション`_ を参照。
+このコマンドを実行すると、プロジェクトの :file:`build/excel` 配下に、DMDLで記述したそれぞれのデータモデルごとにExcelのファイルが生成されます。
+このファイルには、以下のシートが含められます。
 
-..  option:: -source
-
-    対象のデータモデルを定義したDMDLスクリプトへのパス一覧。
-    スクリプトファイル化、それを含むディレクトリを指定する。
-    パス区切り文字で区切って複数指定可能。
-
-..  option:: -output
-
-    生成したテストデータテンプレートを出力する先のディレクトリ。
-    存在しない場合には自動生成する。
-
-..  option:: -encoding (optional)
-
-    DMDLスクリプトのエンコーディング。
-    未指定の場合はプラットフォーム依存。
-
-..  option:: -plugin (optional)
-
-    DMDLコンパイラのプラグインファイル。
-    パス区切り文字で区切って複数指定可能。
-
-.. _testdata-generator-excel-format:
-
-formatオプション
-~~~~~~~~~~~~~~~~
-
-``-format`` オプションには次の値を指定できます。
-
-..  option:: ALL
-
-    入力データ、期待データ、テスト条件を記述できるシートを生成 (Excel 97形式)。
-
-..  option:: DATA
-
-    入力データまたは期待データを記述できるシートのみを生成 (Excel 97形式)。
-
-..  option:: RULE
-
-    テスト条件を記述できるシートのみを生成 (Excel 97形式)。
-
-..  option:: INOUT
-
-    入力データと期待データを記述できるシートを生成 (Excel 97形式)。
-
-..  option:: INSPECT
-
-    期待データとテスト条件を記述できるシートを生成 (Excel 97形式)。
-
-..  option:: ALLX
-
-    入力データ、期待データ、テスト条件を記述できるシートを生成 (Excel 2007形式)。
-
-    ..  versionadded:: 0.5.3
-
-..  option:: DATAX
-
-    入力データまたは期待データを記述できるシートのみを生成 (Excel 2007形式)。
-
-    ..  versionadded:: 0.5.3
-
-..  option:: RULEX
-
-    テスト条件を記述できるシートのみを生成 (Excel 2007形式)。
-
-    ..  versionadded:: 0.5.3
-
-..  option:: INOUTX
-
-    入力データと期待データを記述できるシートを生成 (Excel 2007形式)。
-
-    ..  versionadded:: 0.5.3
-
-..  option:: INSPECTX
-
-    期待データとテスト条件を記述できるシートを生成 (Excel 2007形式)。
-
-    ..  versionadded:: 0.5.3
-
-..  attention::
-    Excel 97形式のシートではカラム数が256までという制限があるため、256より多いプロパティを持つデータモデルに対して入力データシートと出力データシートですべてのプロパティを扱うことができないという制約があります。
+* `入力データと期待データ`_ 定義用のデータ記述シート
+* `テスト条件`_ 定義用の比較条件シート
 
 入力データと期待データ
 ======================
@@ -210,7 +132,7 @@ Excelのセルの形式を強制的に文字列として指定するには、セ
 テスト条件
 ==========
 
-テスト条件は、生成したテストデータテンプレートの条件記述シートに記述します。
+テスト条件は、生成したテストデータテンプレートの比較条件シートに記述します。
 このシートは、全体の比較条件やプロパティごとの比較条件をドロップダウンの形式で選択します。
 
 ..  figure:: shipment-rule.png
@@ -434,3 +356,111 @@ NULLの比較
     Eclipseのワークスペース上のファイルをExcelで操作している場合、Excelで保存したファイルがEclipseに反映されない場合があります。
     その場合、該当ファイルをパッケージエクスプローラー等から選択し、コンテキストメニューから :guilabel:`Refresh` などを選択してください。
 
+コマンドラインインターフェース
+==============================
+
+`テストデータテンプレートの生成`_ で説明した方法のほかに、
+:asakusafw-javadoc:`com.asakusafw.testdata.generator.excel.Main` を実行してテストデータテンプレートを生成することもできます。
+
+指定できるオプションは次の通りです。
+
+..  program:: com.asakusafw.testdata.generator.excel.Main
+
+..  option:: -format
+
+    出力するテンプレートの形式。
+    種類については `formatオプション`_ を参照。
+
+..  option:: -source
+
+    対象のデータモデルを定義したDMDLスクリプトへのパス一覧。
+    スクリプトファイル化、それを含むディレクトリを指定する。
+    パス区切り文字で区切って複数指定可能。
+
+..  option:: -output
+
+    生成したテストデータテンプレートを出力する先のディレクトリ。
+    存在しない場合には自動生成する。
+
+..  option:: -encoding (optional)
+
+    DMDLスクリプトのエンコーディング。
+    未指定の場合はプラットフォーム依存。
+
+..  option:: -plugin (optional)
+
+    DMDLコンパイラのプラグインファイル。
+    パス区切り文字で区切って複数指定可能。
+
+.. _testdata-generator-excel-format:
+
+formatオプション
+----------------
+
+``-format`` オプションには次の値を指定できます。
+
+..  option:: ALL
+
+    入力データ、期待データ、テスト条件を記述できるシートを生成 (Excel 97形式)。
+
+..  option:: DATA
+
+    入力データまたは期待データを記述できるシートのみを生成 (Excel 97形式)。
+
+..  option:: RULE
+
+    テスト条件を記述できるシートのみを生成 (Excel 97形式)。
+
+..  option:: INOUT
+
+    入力データと期待データを記述できるシートを生成 (Excel 97形式)。
+
+..  option:: INSPECT
+
+    期待データとテスト条件を記述できるシートを生成 (Excel 97形式)。
+
+..  option:: ALLX
+
+    入力データ、期待データ、テスト条件を記述できるシートを生成 (Excel 2007形式)。
+
+    ..  versionadded:: 0.5.3
+
+..  option:: DATAX
+
+    入力データまたは期待データを記述できるシートのみを生成 (Excel 2007形式)。
+
+    ..  versionadded:: 0.5.3
+
+..  option:: RULEX
+
+    テスト条件を記述できるシートのみを生成 (Excel 2007形式)。
+
+    ..  versionadded:: 0.5.3
+
+..  option:: INOUTX
+
+    入力データと期待データを記述できるシートを生成 (Excel 2007形式)。
+
+    ..  versionadded:: 0.5.3
+
+..  option:: INSPECTX
+
+    期待データとテスト条件を記述できるシートを生成 (Excel 2007形式)。
+
+    ..  versionadded:: 0.5.3
+
+..  attention::
+    Excel 97形式のシートではカラム数が256までという制限があるため、256より多いプロパティを持つデータモデルに対して入力データシートと出力データシートですべてのプロパティを扱うことができないという制約があります。
+
+ビルド設定ファイル
+==================
+
+``build.gradle`` に `コマンドラインインターフェース`_ で説明したオプションを指定することができます。
+
+以下例のように、``generateTestbook`` タスクに対して GenerateTestbookTask [#]_ が提供するプロパティの値を設定します。
+
+..  code-block:: groovy
+
+    generateTestbook.outputSheetFormat = 'ALLX'
+
+..  [#] :asakusa-gradle-groovydoc:`com.asakusafw.gradle.tasks.GenerateTestbookTask`

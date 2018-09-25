@@ -603,6 +603,8 @@ Direct I/Oを利用してファイルを入出力するには、 `Hadoopのフ�
 ..  [#] :asakusafw-javadoc:`com.asakusafw.runtime.directio.BinaryStreamFormat`
 ..  [#] :asakusafw-javadoc:`com.asakusafw.runtime.directio.hadoop.HadoopFileFormat`
 
+.. _directio-create-dataformat:
+
 データフォーマットの作成
 ------------------------
 
@@ -1061,14 +1063,21 @@ Direct I/Oを利用してデータをファイルに書き出す場合、 ``Dire
 ========================
 
 Direct I/Oを利用したジョブフローやバッチのテストは、Asakusa Frameworkの通常のテスト方法で行えます。
-通常のテストについては :doc:`../testing/index` を参照してください。
+テスト方法については :doc:`../testing/index` を参照してください。
 
-なおテスト実行時には、Direct I/Oの設定は開発環境にインストールしたAsakusa Frameworkの設定ファイル :file:`$ASAKUSA_HOME/core/conf/asakusa-resources.xml` が使用されるため、必要に応じてこのファイルを編集し、適切な設定を行ってください。
+ここでは、Direct I/Oを使ってテストドライバーを実行する際の動作や注意点を説明します。
 
 テスト実行時の動作
 ------------------
 
 以下はテスト実行時のテストドライバーの挙動です。
+
+テスト実行時の設定
+~~~~~~~~~~~~~~~~~~
+
+テストドライバーを使ったテスト実行時には、Direct I/Oの `データソースの設定`_ は通常の実行環境と同様に、
+開発環境にインストールしたAsakusa Frameworkの設定ファイル :file:`$ASAKUSA_HOME/core/conf/asakusa-resources.xml` が使用されます。
+必要に応じてこのファイルを編集し、適切な設定を行ってください。
 
 入出力のクリア
 ~~~~~~~~~~~~~~
@@ -1128,102 +1137,23 @@ Direct I/Oを利用したジョブフローやバッチのテストは、Asakusa
 データフォーマットに対応したファイルをテストデータに指定
 --------------------------------------------------------
 
-Direct I/Oを利用したアプリケーションのテストでは通常のテスト方法に加えて、Direct I/Oのデータフォーマットに対応するファイルをテストデータとして指定することも可能です。
+Direct I/Oを利用したアプリケーションのテストでは、Direct I/Oのデータフォーマットに対応するファイルをテストデータとして指定することも可能です。
 
-例えば :doc:`csv-format` を利用するアプリケーションでは、このフォーマット定義に対応するCSVファイルをテストの入力データや期待値データとして指定することができます。
+例えば :doc:`csv-format` を利用するアプリケーションでは、このフォーマット定義に対応するCSVファイルをテストの入力データや期待データとして指定することができます。
 
 演算子のテスト
 ~~~~~~~~~~~~~~
 
-演算子のテストでは、Direct I/Oのデータフォーマットに対応するファイルからデータモデルオブジェクトを生成することができます。
+演算子のテストでは、``DataLoader`` を利用して演算子の入力となるデータモデルオブジェクトをDirect I/Oのデータフォーマットに対応するファイルから生成することができます。
 
-以下、テストの実装例です。
-
-..  code-block:: java
-
-    public class CategorySummaryOperatorTest {
-
-        @Rule
-        public final OperatorTestEnvironment env = new OperatorTestEnvironment();
-
-        @Test
-        public void selectAvailableItem() {
-
-            List<ItemInfo> candidates = env.loader(ItemInfo.class,
-                    ItemInfoCsvFormat.class,
-                    "item_info.csv" // (or) new File("src/test/resources/com/example/operator/item_info.csv")
-            ).asList();
-
-            CategorySummaryOperator operator = new CategorySummaryOperatorImpl();
-            ItemInfo item1 = operator.selectAvailableItem(candidates, sales(1));
-            ItemInfo item5 = operator.selectAvailableItem(candidates, sales(5));
-            ...
-        }
-    }
-
-``OperatorTestEnvironment`` の ``loader`` メソッド [#]_ [#]_ に `データフォーマットの作成`_ で生成した ``DataFormat`` の実装クラスとテストデータのファイルパス [#]_ を指定します。
-詳しくは、各APIのJavaDocを参照してください。
-
-..  [#] :asakusafw-javadoc:`com.asakusafw.testdriver.OperatorTestEnvironment`
-..  [#] :asakusafw-javadoc:`com.asakusafw.testdriver.loader.DataLoader`
-..  [#] ファイルパスは文字列で指定した場合はクラスパス上から検索し、 ``File`` オブジェクトで指定した場合は引数で指定したファイルパス(相対パス指定時は通常プロジェクトルートからの相対パス)を使用します。
-
-..  seealso::
-    上記のテスト方法の他は、通常の演算子のテスト方法と同様です。詳しくは :doc:`../testing/user-guide` - :ref:`testing-userguide-operator-testing` などを参照してください。
+詳しくは、:doc:`../testing/user-guide` - 演算子のテスト - :ref:`testing-userguide-dataloader` を参照してください。
 
 データフローのテスト
 ~~~~~~~~~~~~~~~~~~~~
 
-データのテストでは、Direct I/Oのデータフォーマットに対応するファイルからデータフローの入出力データを生成することができます。
+データフローのテストでは、入力データと期待データをDirect I/Oのデータフォーマットに対応するファイルから生成することができます。
 
-以下、テストの実装例です。
-
-..  code-block:: java
-
-    public class CategorySummaryJobTest {
-
-        @Test
-        public void run() {
-            JobFlowTester tester = new JobFlowTester(getClass());
-            tester.setBatchArg("date", "testing");
-
-            // Direct I/O CSV 形式のCSVファイルを入力データに指定
-            tester.input("storeInfo", StoreInfo.class).prepare(
-                    StoreInfoCsvFormat.class,
-                    "store_info.csv");      // (or) new File("src/test/resources/com/example/jobflow/store_info.csv");
-
-            tester.input("itemInfo", ItemInfo.class).prepare(
-                    ItemInfoCsvFormat.class,
-                    "item_info.csv");       // (or) new File("src/test/resources/com/example/jobflow/item_info.csv");
-
-            tester.input("salesDetail", SalesDetail.class).prepare(
-                    SalesDetailCsvFormat.class,
-                    "2011-04-01.csv");      // (or) new File("src/test/resources/com/example/jobflow/2011-04-01.csv");
-
-            // Direct I/O CSV 形式のCSVファイルを期待値データに指定
-            tester.output("categorySummary", CategorySummary.class).verify(
-                    CategorySummaryCsvFormat.class,
-                    "result.csv",           // (or) new File("src/test/resources/com/example/jobflow/result.csv");
-                    "summarize.xls#result_rule");
-
-            // Direct I/O CSV 形式のCSVファイルで出力結果を保存
-            tester.output("errorRecord", ErrorRecord.class).dumpActual(
-                    ErrorRecordCsvFormat.class,
-                    new File("build/dump/error-record.csv"));
-
-            tester.runTest(CategorySummaryJob.class);
-        }
-    }
-
-``JobFlowTester`` や ``FlowPartTester`` の入力 ( ``input`` [#]_ ) に対する ``prepare`` メソッドや、 出力 ( ``output`` [#]_ ) に対する ``verify`` , ``dumpActual`` メソッドに `データフォーマットの作成`_ で生成した ``DataFormat`` の実装クラスとテストデータのファイルパス [#]_ を指定します。
-詳しくは、各APIのJavaDocを参照してください。
-
-..  [#] :asakusafw-javadoc:`com.asakusafw.testdriver.FlowDriverInput`
-..  [#] :asakusafw-javadoc:`com.asakusafw.testdriver.FlowDriverOutput`
-..  [#] ファイルパスは文字列で指定した場合はクラスパス上から検索し、 ``File`` オブジェクトで指定した場合は引数で指定したファイルパス(相対パス指定時は通常プロジェクトルートからの相対パス)を使用します。
-
-..  seealso::
-    上記のテスト方法の他は、通常のデータフローのテスト方法と同様です。詳しくは :doc:`../testing/user-guide` - :ref:`testing-userguide-dataflow-testing` などを参照してください。
+詳しくは、:doc:`../testing/user-guide` - データフローのテストデータ作成 - :ref:`testing-userguide-testdata-directio` を参照してください。
 
 トランザクションのメンテナンス
 ==============================

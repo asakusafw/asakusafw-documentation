@@ -196,6 +196,8 @@ Shafuを導入した開発環境では、オンライン上に公開されてい
 
 #. :guilabel:`Finish` ボタンを押すと選択したプロジェクトテンプレートを読み込み、Eclipseプロジェクトとして新規プロジェクトが作成されます。
 
+.. _introduction-start-guide-install-asakusafw:
+
 Asakusa Frameworkのインストール
 -------------------------------
 

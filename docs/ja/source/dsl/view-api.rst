@@ -274,65 +274,13 @@ Flow DSLでビューAPIを使用した演算子を利用するデータフロー
 演算子メソッドのテスト
 ----------------------
 
-演算子メソッドのテスト内では、 ``View<T>`` や ``GroupView<T>`` に対応するデータモデルオブジェクトを ``OperatorTestEnvironment`` [#]_ を利用して生成することができます。
+演算子のテストでは、``DataLoader`` を利用して ``View<T>`` や ``GroupView<T>`` に対応するデータモデルオブジェクトを生成することができます。
 
-..  code-block:: java
-    :emphasize-lines: 8-9, 21-24
-
-    public class WithViewOperatorTest {
-
-        @Rule
-        public final OperatorTestEnvironment env = new OperatorTestEnvironment();
-
-        @Test
-        public void updateWithView() {
-            View<Foo> fooView = env.loader(Foo.class, "with_view.xls#foo")
-                    .asView();
-            List<SalesDetail> salesList = env.loader(SalesDetail.class, "with_view.xls#sales")
-                    .asList();
-
-            for (SalesDetail sales : salesList) {
-                new WithViewOperatorImpl().updateWithView(sales, fooView);
-                ...
-            }
-        }
-
-        @Test
-        public void extractWithGroupView() {
-            GroupView<Foo> fooView = env.loader(Foo.class, "foo.xls#group_view")
-                    .group("store_code")
-                    .order("id")
-                    .asView();
-            List<SalesDetail> salesList = env.loader(SalesDetail.class, "with_view.xls#sales")
-                    .asList();
-            Result<SalesDetail> result = env.newResult(SalesDetail.class);
-            Result<ErrorRecord> error = env.newResult(ErrorRecord.class);
-
-            for (SalesDetail sales : salesList) {
-                new WithViewOperatorImpl().extractWithGroupView(sales, fooView, result, error);
-                ...
-            }
-        }
-    }
-
-テストメソッド内で ``View<T>`` に対応するオブジェクトを取得するには、 ``OperatorTestEnvironment`` の ``loader`` メソッドでテストデータを指定し、このメソッドが返す ``DataLoader`` [#]_ オブジェクトに対して、 ``asView`` メソッドを呼び出します。
-
-また、``GroupView<T>`` に対応するオブジェクトを取得するには、 ``DataLoader`` オブジェクトに対して、 ``group`` メソッドでグループを指定し、このメソッドが返す ``GroupLoader`` [#]_ オブジェクトに対して ``asView`` メソッドを呼び出します。 整列順序を指定する場合は ``order`` メソッドを使用します。
-
-..  hint::
-    ビューに対応するテストデータは以下のようなものを指定することができます。これらはいずれも ``OperatorTestEnvironment`` の ``loader`` メソッドの引数として指定します。
-
-    * テストデータ定義シート(Excelファイル)の **ファイルパス#シート名** を指定 - 上記コード例の方法です
-    * ``Iterable`` ( ``List`` ) を指定 - 少量のデータを指定したり、テストデータをテストメソッド内で動的に生成するといった場合に利用できます
-    * Direct I/Oのデータフォーマットに対応するファイル ( CSVファイルなど) の情報を指定 - 実装例は :doc:`../testing/user-guide` - :ref:`directio-testdriver-dataformat` を参照してください
-
-詳しくは、各APIのJavaDocを参照してください。
-
-..  [#] :asakusafw-javadoc:`com.asakusafw.testdriver.OperatorTestEnvironment`
-..  [#] :asakusafw-javadoc:`com.asakusafw.testdriver.loader.DataLoader`
-..  [#] :asakusafw-javadoc:`com.asakusafw.testdriver.loader.GroupLoader`
+詳しくは、:doc:`../testing/user-guide` - 演算子のテスト - :ref:`testing-userguide-viewapi` を参照してください。
 
 データフローのテスト
 --------------------
 
-ビューAPIを使用する演算子を含むデータフローは、通常のデータフローと同様の方法でテストを記述することができます。詳しくは :doc:`../testing/user-guide` などを参照してください。
+ビューAPIを使用する演算子を含むデータフローは、通常のデータフローと同様の方法でテストを記述することができます。
+
+詳しくは :doc:`../testing/user-guide` - :ref:`testing-userguide-dataflow-testing` などを参照してください。
