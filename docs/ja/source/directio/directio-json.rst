@@ -76,7 +76,7 @@ JSONフィールド単位で個別に設定を指定したい場合は、 後述
 ..  code-block:: dmdl
 
     @directio.json (
-        format = jsonl
+        format = jsonl,
         compression = "gzip",
         date_format = "yyyy/MM/dd",
         datetime_format = "yyyy/MM/dd HH:mm:ss",
