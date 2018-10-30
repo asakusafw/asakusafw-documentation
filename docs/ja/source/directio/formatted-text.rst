@@ -229,6 +229,8 @@ Direct I/O lineが想定する用途は主に2つあり、1つは `JSON <http://
   * ``@directio.text.tabular`` : ``"\t"`` (HT:水平タブ)
   * ``@directio.text.csv``       : ``","`` (カンマ)
 
+..  [#] ``org.apache.hadoop.io.compress.CompressionCodec``
+
 ファイルヘッダの構成
 --------------------
 
@@ -312,7 +314,6 @@ Direct I/O lineが想定する用途は主に2つあり、1つは `JSON <http://
 
   既定値: 未指定
 
-..  [#] ``org.apache.hadoop.io.compress.CompressionCodec``
 ..  [#] ``java.text.DecimalFormat``
 ..  [#] ``java.text.SimpleDateFormat``
 
@@ -538,7 +539,7 @@ Direct I/O formatted text が扱うテキストファイルのデータフィー
 データモデルに定義されている特定のプロパティをデータフィールドとして取り扱いたくない場合の設定です。
 
 ``@directio.text.ignore``
-  このフィールドをデータフィールドとして取り扱わない。
+  このプロパティをデータフィールドとして取り扱わない。
 
 ファイル情報の取得
 ------------------

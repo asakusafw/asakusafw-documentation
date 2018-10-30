@@ -41,6 +41,7 @@ Asakusa Frameworkの外部で作成されたシーケンスファイルを利用
     csv-format
     directio-tsv
     formatted-text
+    directio-json
     directio-line
     sequencefile-format
     using-hive

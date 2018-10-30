@@ -613,7 +613,8 @@ Direct I/Oはいくつかのファイルフォーマットにおいて、 ``Data
 Direct I/Oが提供する各ファイルフォーマットの利用方法については、以下のドキュメントを参照してください。
 
 * :doc:`csv-format` (CSV形式のテキストファイルの入出力)
-* :doc:`formatted-text` (区切り文字によってレコードやフィールドが構成される汎用的なテストファイルの入出力)
+* :doc:`formatted-text` (区切り文字によってレコードやフィールドが構成される汎用的なテキストファイルの入出力)
+* :doc:`directio-json` (JSON形式のファイルの入出力)
 * :doc:`directio-line` (任意の行文字列の入出力)
 * :doc:`sequencefile-format` (Hadoopシーケンスファイルの利用)
 * :doc:`using-hive` (カラムナフォーマットファイルの利用)
