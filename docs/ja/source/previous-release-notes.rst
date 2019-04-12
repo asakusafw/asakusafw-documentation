@@ -13,7 +13,7 @@ Aug 07, 2017
 
 `Asakusa Framework 0.9.2 documentation`_
 
-..  _`Asakusa Framework 0.9.2 documentation`: http://docs.asakusafw.com/0.9.2/release/ja/html/index.html
+..  _`Asakusa Framework 0.9.2 documentation`: https://docs.asakusafw.com/0.9.2/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -76,7 +76,7 @@ Apr 26, 2017
 
 `Asakusa Framework 0.9.1 documentation`_
 
-..  _`Asakusa Framework 0.9.1 documentation`: http://docs.asakusafw.com/0.9.1/release/ja/html/index.html
+..  _`Asakusa Framework 0.9.1 documentation`: https://docs.asakusafw.com/0.9.1/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -141,7 +141,7 @@ Dec 05, 2016
 
 `Asakusa Framework 0.9.0 documentation`_
 
-..  _`Asakusa Framework 0.9.0 documentation`: http://docs.asakusafw.com/0.9.0/release/ja/html/index.html
+..  _`Asakusa Framework 0.9.0 documentation`: https://docs.asakusafw.com/0.9.0/release/ja/html/index.html
 
 はじめに
 --------
@@ -298,7 +298,7 @@ Dec 05, 2016
 
 `Asakusa Framework 0.8.2 documentation`_
 
-..  _`Asakusa Framework 0.8.2 documentation`: http://docs.asakusafw.com/0.8.2/release/ja/html/index.html
+..  _`Asakusa Framework 0.8.2 documentation`: https://docs.asakusafw.com/0.8.2/release/ja/html/index.html
 
 このバージョンはバグフィックスのみを含むメンテナンスリリースです。
 
@@ -311,7 +311,7 @@ Jul 25, 2016
 
 `Asakusa Framework 0.8.1 documentation`_
 
-..  _`Asakusa Framework 0.8.1 documentation`: http://docs.asakusafw.com/0.8.1/release/ja/html/index.html
+..  _`Asakusa Framework 0.8.1 documentation`: https://docs.asakusafw.com/0.8.1/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -392,7 +392,7 @@ Apr 08, 2016
 
 `Asakusa Framework 0.8.0 documentation`_
 
-..  _`Asakusa Framework 0.8.0 documentation`: http://docs.asakusafw.com/0.8.0/release/ja/html/index.html
+..  _`Asakusa Framework 0.8.0 documentation`: https://docs.asakusafw.com/0.8.0/release/ja/html/index.html
 
 はじめに
 --------
@@ -548,7 +548,7 @@ Dec 02, 2015
 
 `Asakusa Framework 0.7.6 documentation`_
 
-..  _`Asakusa Framework 0.7.6 documentation`: http://docs.asakusafw.com/0.7.6/release/ja/html/index.html
+..  _`Asakusa Framework 0.7.6 documentation`: https://docs.asakusafw.com/0.7.6/release/ja/html/index.html
 
 このバージョンはAsakusa DSLコンパイラの以下の問題に対応したメンテナンスリリースです。
 
@@ -563,7 +563,7 @@ Nov 19, 2015
 
 `Asakusa Framework 0.7.5 documentation`_
 
-..  _`Asakusa Framework 0.7.5 documentation`: http://docs.asakusafw.com/0.7.5/release/ja/html/index.html
+..  _`Asakusa Framework 0.7.5 documentation`: https://docs.asakusafw.com/0.7.5/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -645,7 +645,7 @@ Aug 11, 2015
 
 `Asakusa Framework 0.7.4 documentation`_
 
-..  _`Asakusa Framework 0.7.4 documentation`: http://docs.asakusafw.com/0.7.4/release/ja/html/index.html
+..  _`Asakusa Framework 0.7.4 documentation`: https://docs.asakusafw.com/0.7.4/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -717,7 +717,7 @@ Apr 22, 2015
 
 `Asakusa Framework 0.7.3 documentation`_
 
-..  _`Asakusa Framework 0.7.3 documentation`: http://docs.asakusafw.com/0.7.3/release/ja/html/index.html
+..  _`Asakusa Framework 0.7.3 documentation`: https://docs.asakusafw.com/0.7.3/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -798,7 +798,7 @@ Jan 05, 2015
 
 `Asakusa Framework 0.7.2 documentation`_
 
-..  _`Asakusa Framework 0.7.2 documentation`: http://docs.asakusafw.com/0.7.2/release/ja/html/index.html
+..  _`Asakusa Framework 0.7.2 documentation`: https://docs.asakusafw.com/0.7.2/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -842,7 +842,7 @@ Nov 20, 2014
 
 `Asakusa Framework 0.7.1 documentation`_
 
-..  _`Asakusa Framework 0.7.1 documentation`: http://docs.asakusafw.com/0.7.1/release/ja/html/index.html
+..  _`Asakusa Framework 0.7.1 documentation`: https://docs.asakusafw.com/0.7.1/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -896,7 +896,7 @@ Sep 25, 2014
 
 `Asakusa Framework 0.7.0 documentation`_
 
-..  _`Asakusa Framework 0.7.0 documentation`: http://docs.asakusafw.com/0.7.0/release/ja/html/index.html
+..  _`Asakusa Framework 0.7.0 documentation`: https://docs.asakusafw.com/0.7.0/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -1014,7 +1014,7 @@ May 22, 2014
 
 `Asakusa Framework 0.6.2 documentation`_
 
-..  _`Asakusa Framework 0.6.2 documentation`: http://docs.asakusafw.com/0.6.2/release/ja/html/index.html
+..  _`Asakusa Framework 0.6.2 documentation`: https://docs.asakusafw.com/0.6.2/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -1077,7 +1077,7 @@ Mar 19, 2014
 
 `Asakusa Framework 0.6.1 documentation`_
 
-..  _`Asakusa Framework 0.6.1 documentation`: http://docs.asakusafw.com/0.6.1/release/ja/html/index.html
+..  _`Asakusa Framework 0.6.1 documentation`: https://docs.asakusafw.com/0.6.1/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -1111,7 +1111,7 @@ Feb 17, 2014
 
 `Asakusa Framework 0.6.0 documentation`_
 
-..  _`Asakusa Framework 0.6.0 documentation`: http://docs.asakusafw.com/0.6.0/release/ja/html/index.html
+..  _`Asakusa Framework 0.6.0 documentation`: https://docs.asakusafw.com/0.6.0/release/ja/html/index.html
 
 .. contents::
    :local:
@@ -1211,7 +1211,7 @@ Dec 24, 2013
 
 `Asakusa Framework 0.5.3 documentation`_
 
-..  _`Asakusa Framework 0.5.3 documentation`: http://docs.asakusafw.com/0.5.3/release/ja/html/index.html
+..  _`Asakusa Framework 0.5.3 documentation`: https://docs.asakusafw.com/0.5.3/release/ja/html/index.html
 
 本リリースはAsakusa Frameworkの開発版リリースです。
 主な変更内容は以下の通りです。
@@ -1239,7 +1239,7 @@ Nov 20, 2013
 
 `Asakusa Framework 0.5.2 documentation`_
 
-..  _`Asakusa Framework 0.5.2 documentation`: http://docs.asakusafw.com/0.5.2/release/ja/html/index.html
+..  _`Asakusa Framework 0.5.2 documentation`: https://docs.asakusafw.com/0.5.2/release/ja/html/index.html
 
 本リリースはAsakusa Frameworkの開発版リリースです。
 主な変更内容は以下の通りです。
@@ -1256,7 +1256,7 @@ Jul 26, 2013
 
 `Asakusa Framework 0.5.1 documentation`_
 
-..  _`Asakusa Framework 0.5.1 documentation`: http://docs.asakusafw.com/0.5.1/release/ja/html/index.html
+..  _`Asakusa Framework 0.5.1 documentation`: https://docs.asakusafw.com/0.5.1/release/ja/html/index.html
 
 本リリースはAsakusa Frameworkの開発版リリースです。
 主な変更内容は以下の通りです。
@@ -1273,7 +1273,7 @@ May 9, 2013
 
 `Asakusa Framework 0.5.0 documentation`_
 
-..  _`Asakusa Framework 0.5.0 documentation`: http://docs.asakusafw.com/0.5.0/release/ja/html/index.html
+..  _`Asakusa Framework 0.5.0 documentation`: https://docs.asakusafw.com/0.5.0/release/ja/html/index.html
 
 本リリースはAsakusa Frameworkの開発版リリースです。
 主な変更内容は以下の通りです。
@@ -1287,7 +1287,7 @@ May 9, 2013
 
 * `Asakusa Framework Sandbox - CDH4上でAsakusa Frameworkを利用する`_
 
-..  _`Asakusa Framework Sandbox - CDH4上でAsakusa Frameworkを利用する`: http://docs.asakusafw.com/sandbox/ja/html/administration/asakusa-on-cdh4.html
+..  _`Asakusa Framework Sandbox - CDH4上でAsakusa Frameworkを利用する`: https://docs.asakusafw.com/sandbox/ja/html/administration/asakusa-on-cdh4.html
 
 Release 0.4.0
 =============
@@ -1296,7 +1296,7 @@ Aug 30, 2012
 
 `Asakusa Framework 0.4.0 documentation`_
 
-..  _`Asakusa Framework 0.4.0 documentation`: http://docs.asakusafw.com/0.4.0/release/ja/html/index.html
+..  _`Asakusa Framework 0.4.0 documentation`: https://docs.asakusafw.com/0.4.0/release/ja/html/index.html
 
 本リリースはAsakusa Frameworkの安定版リリースです。
 主な変更内容は以下の通りです。
@@ -1315,7 +1315,7 @@ May 31, 2012
 
 `Asakusa Framework 0.2.6 documentation`_
 
-..  _`Asakusa Framework 0.2.6 documentation`: http://docs.asakusafw.com/0.2/release/ja/html/index.html
+..  _`Asakusa Framework 0.2.6 documentation`: https://docs.asakusafw.com/0.2/release/ja/html/index.html
 
 本リリースではYAESS マルチディスパッチ機能が追加されました。
 

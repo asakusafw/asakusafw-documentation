@@ -4,7 +4,7 @@ Asakusa on Spark ユーザガイド
 
 この文書では、 `Asakusa Framework`_ を使って作成したバッチアプリケーションを `Apache Spark`_ 上で実行する方法について説明します。
 
-..  _`Asakusa Framework`: http://docs.asakusafw.com/latest/release/ja/html/index.html
+..  _`Asakusa Framework`: https://docs.asakusafw.com/latest/release/ja/html/index.html
 ..  _`Apache Spark`: http://spark.apache.org/
 
 概要

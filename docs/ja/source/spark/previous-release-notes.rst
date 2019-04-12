@@ -13,7 +13,7 @@ Dec 05, 2016
 
 `Asakusa on Spark 0.3.2 documentation`_
 
-..  _`Asakusa on Spark 0.3.2 documentation`: http://docs.asakusafw.com/asakusa-on-spark/0.3.2/release/ja/html/index.html
+..  _`Asakusa on Spark 0.3.2 documentation`: https://docs.asakusafw.com/asakusa-on-spark/0.3.2/release/ja/html/index.html
 
 * Spark バージョン 1.6.3 に対応しました。
 * その他、Spark DSLコンパイラや実行ライブラリなどのバグフィックスが含まれます。
@@ -32,7 +32,7 @@ Jul 25, 2016
 
 `Asakusa on Spark 0.3.1 documentation`_
 
-..  _`Asakusa on Spark 0.3.1 documentation`: http://docs.asakusafw.com/asakusa-on-spark/0.3.1/release/ja/html/index.html
+..  _`Asakusa on Spark 0.3.1 documentation`: https://docs.asakusafw.com/asakusa-on-spark/0.3.1/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -54,7 +54,7 @@ Apr 08, 2016
 
 `Asakusa on Spark 0.3.0 documentation`_
 
-..  _`Asakusa on Spark 0.3.0 documentation`: http://docs.asakusafw.com/asakusa-on-spark/0.3.0/release/ja/html/index.html
+..  _`Asakusa on Spark 0.3.0 documentation`: https://docs.asakusafw.com/asakusa-on-spark/0.3.0/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------

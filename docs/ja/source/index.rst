@@ -74,7 +74,7 @@ Asakusa Framework入門
 ..  _`ソースリポジトリ (GitHub)`: http://github.com/asakusafw/asakusafw
 ..  _`サンプルプログラム集 (GitHub)`: http://github.com/asakusafw/asakusafw-examples
 ..  _`課題管理 (GitHub)`: https://github.com/asakusafw/asakusafw-issues/issues
-..  _`ビルドサーバー(Jenkins)`: http://ci.asakusafw.com
+..  _`ビルドサーバー(Jenkins)`: https://ci.asakusafw.com
 
 ..  toctree::
     :hidden:
