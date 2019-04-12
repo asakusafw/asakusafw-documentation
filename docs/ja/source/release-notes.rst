@@ -12,7 +12,7 @@ Sep 26, 2018
 
 `Asakusa Framework 0.10.2 documentation`_
 
-..  _`Asakusa Framework 0.10.2 documentation`: http://docs.asakusafw.com/0.10.2/release/ja/html/index.html
+..  _`Asakusa Framework 0.10.2 documentation`: https://docs.asakusafw.com/0.10.2/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -47,7 +47,7 @@ Jun 27, 2018
 
 `Asakusa Framework 0.10.1 documentation`_
 
-..  _`Asakusa Framework 0.10.1 documentation`: http://docs.asakusafw.com/0.10.1/release/ja/html/index.html
+..  _`Asakusa Framework 0.10.1 documentation`: https://docs.asakusafw.com/0.10.1/release/ja/html/index.html
 
 新機能と主な変更点
 ------------------
@@ -72,7 +72,7 @@ Nov 29, 2017
 
 `Asakusa Framework 0.10.0 documentation`_
 
-..  _`Asakusa Framework 0.10.0 documentation`: http://docs.asakusafw.com/0.10.0/release/ja/html/index.html
+..  _`Asakusa Framework 0.10.0 documentation`: https://docs.asakusafw.com/0.10.0/release/ja/html/index.html
 
 .. contents::
    :local:

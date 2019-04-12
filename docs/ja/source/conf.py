@@ -47,16 +47,16 @@ extlinks = {
     'milestone-asakusafw-distribution': ("https://github.com/asakusafw/asakusafw-distribution/issues?&q=milestone:%s", 'asakusafw-distribution milestone:'),
     'milestone-asakusafw-documentation': ("https://github.com/asakusafw/asakusafw-documentation/issues?&q=milestone:%s", 'asakusafw-documentation milestone:'),
     'milestone-m3bp': ("https://github.com/fixstars/m3bp/issues?&q=milestone:%s", 'm3bp milestone:'),
-    'jinrikisha': ('http://docs.asakusafw.com/jinrikisha/ja/html/%s', None),
-    'apiref': ('http://docs.asakusafw.com/0.10.3/release/api/%s', None),
-    'epub': ('http://docs.asakusafw.com/0.10.3/release/ja/epub/%s', None),
-    'basic-tutorial': ('http://docs.asakusafw.com/basic-tutorial/0.10/release/ja/html/%s', None),
+    'jinrikisha': ('https://docs.asakusafw.com/jinrikisha/ja/html/%s', None),
+    'apiref': ('https://docs.asakusafw.com/0.10.3/release/api/%s', None),
+    'epub': ('https://docs.asakusafw.com/0.10.3/release/ja/epub/%s', None),
+    'basic-tutorial': ('https://docs.asakusafw.com/basic-tutorial/0.10/release/ja/html/%s', None),
 }
 javadoclinks = {
-    'asakusafw-javadoc': ('http://docs.asakusafw.com/0.10.3/release/api/%s.html', ""),
-    'asakusa-gradle-groovydoc': ('http://docs.asakusafw.com/0.10.3/release/gradle-plugins/%s.html', ""),
-    'asakusa-spark-gradle-groovydoc': ('http://docs.asakusafw.com/asakusa-on-spark/0.5.3/release/gradle-plugins/%s.html', ""),
-    'asakusa-m3bp-gradle-groovydoc': ('http://docs.asakusafw.com/asakusa-on-m3bp/0.3.3/release/gradle-plugins/%s.html', ""),
+    'asakusafw-javadoc': ('https://docs.asakusafw.com/0.10.3/release/api/%s.html', ""),
+    'asakusa-gradle-groovydoc': ('https://docs.asakusafw.com/0.10.3/release/gradle-plugins/%s.html', ""),
+    'asakusa-spark-gradle-groovydoc': ('https://docs.asakusafw.com/asakusa-on-spark/0.5.3/release/gradle-plugins/%s.html', ""),
+    'asakusa-m3bp-gradle-groovydoc': ('https://docs.asakusafw.com/asakusa-on-m3bp/0.3.3/release/gradle-plugins/%s.html', ""),
 }
 
 rst_prolog = u"""
