@@ -426,25 +426,63 @@ Asakusa Vanillaのバッチアプリケーション実行時の設定項目は�
 
     既定値: (システムの一時ディレクトリー)
 
+``com.asakusafw.vanilla.pool.compression``
+    古いバッファーをファイルシステム上に待避する際の、ファイルの圧縮形式を指定します。
+
+    以下のいずれかの値を指定可能です。
+
+    ``com.asakusafw.vanilla.core.io.BufferedByteChannelDecorator``
+      ファイルを圧縮せず、入出力のバッファリングのみを行います。
+
+    ``com.asakusafw.vanilla.core.io.NullByteChannelDecorator``
+      ファイルを圧縮せず、入出力のバッファリングも行いません。
+
+    ``com.asakusafw.vanilla.client.util.SnappyByteChannelDecorator``
+      ファイルをSnappy形式で圧縮します。
+
+    ``com.asakusafw.vanilla.client.util.Lz4ByteChannelDecorator``
+      ファイルをLZ4形式で圧縮します。
+
+      LZ4形式を利用する場合、LZ4ライブラリ `lz4-java`_ をVanilla実行環境のクラスパスに配置する必要があります。
+      以下、`lz4-java`_ を含めたデプロイメントアーカイブを生成する ``build.gradle`` の設定例です。
+
+      ..  code-block:: groovy
+          :caption: build.gradle
+          :name: build.gradle-vanilla-reference-2
+
+          configurations {
+              lz4
+          }
+          dependencies {
+              lz4 group: 'org.lz4', name: 'lz4-java', version: '1.5.1'
+          }
+          asakusafwOrganizer {
+              assembly.into('vanilla/lib') {
+                  put configurations.lz4
+              }
+          }
+
+    既定値: ``com.asakusafw.vanilla.core.io.BufferedByteChannelDecorator``
+
 ``com.asakusafw.vanilla.output.buffer.size``
     出力バッファーあたりのバイト数を設定します。
 
-    各出力が指定したサイズを超えた場合、次のバッファーを新たに確保して出力を続行します。
+    各出力が、この値から後述の「出力バッファのマージン値」を引いた値( ``com.asakusafw.vanilla.output.buffer.size`` - ``com.asakusafw.vanilla.output.buffer.margin`` )を超えた場合、次のバッファーを新たに確保して出力を続行します。
 
     既定値: ``4194304`` ( ``4MB`` )
 
     ..  hint::
         古いバッファーをファイルシステム上に待避する際、各ファイルのサイズはおよそここで指定したサイズ以下になります。
 
-``com.asakusafw.vanilla.output.buffer.factor``
-    出力バッファーの内容を書き出す際の閾値となる使用量の割合を指定します。
+``com.asakusafw.vanilla.output.buffer.margin``
+    出力バッファーのマージンとなるバイト数を設定します。
 
-    この値には ``0.0`` から ``1.0`` までの値を指定できますが、実装によってはこれより狭い範囲の値に再設定される場合があります。
+    この値は実行時に取り扱う最大レコードサイズよりも大きな値を設定すべきです。
 
-    既定値: ``0.90`` ( ``90%`` )
+    また、この値は ``com.asakusafw.vanilla.output.buffer.size`` の1/2より小さい値を設定してください。
+    最大レコードサイズが大きいことでこれが満たせない場合、 ``com.asakusafw.vanilla.output.buffer.size`` の値を調整してください。
 
-    ..  hint::
-        この値を ``1.0`` に近づけるとバッファーの利用効率は向上しますが、極端に大きなレコードが存在した場合にメモリーのコピーが頻発する場合があります。
+    既定値: ``1048576`` ( ``1MB`` )
 
 ``com.asakusafw.vanilla.output.record.size``
     レコードサイズの推定平均バイト数を設定します。
@@ -458,6 +496,20 @@ Asakusa Vanillaのバッチアプリケーション実行時の設定項目は�
         また、この値を小さくしすぎると、出力バッファーごとのレコード管理のためのメタデータが大きくなりすぎてしまいます。
 
         出力バッファーサイズに極端に大きな値を指定する場合や、消費メモリー量を細かく制御したい場合を除き、この設定を変更する必要はありません。
+
+``com.asakusafw.vanilla.merge.threshold``
+    各スレッド毎の、scatter-gather操作でマージ処理を行う際の入力チャンク数を指定します。
+
+    入力チャンク数がこの値を超過する場合、この値と後述の ``com.asakusafw.vanilla.merge.factor`` の値に従い、入力チャンクに対して段階的にマージ処理を行います。
+
+    既定値: ``0`` （段階的マージを無効とし、すべての入力チャンクを一度にマージする）
+
+``com.asakusafw.vanilla.merge.factor``
+    上記 ``com.asakusafw.vanilla.merge.threshold`` の設定に従って段階的マージを行う際に、マージ処理の対象となるファイル数を決定する係数を設定します。
+
+    マージが実行される際には ``com.asakusafw.vanilla.merge.threshold`` * ``com.asakusafw.vanilla.merge.factor`` で算出されたファイル数を一度にマージします。
+
+    既定値: ``0.75``
 
 ``com.asakusafw.dag.input.file.directory``
   :doc:`../dsl/operators` - :ref:`spill-input-buffer` などを利用してメモリ上のバッファをファイルとして退避する際に使用する、
@@ -477,6 +529,8 @@ Asakusa Vanillaのバッチアプリケーション実行時の設定項目は�
 
         Asakusa全体に関するHadoopの設定は ``$ASAKUSA_HOME/core/conf/asakusa-resources.xml`` 内で行えますが、 同一の項目に対する設定が
         ``asakusa-resources.xml`` と ``hadoop.<name>`` の両方に存在する場合、後者の設定値を優先します。
+
+..  _`lz4-java`: https://github.com/lz4/lz4-java
 
 Java VMの設定
 -------------
@@ -528,7 +582,7 @@ WindGate JDBC ダイレクト・モードを利用するには、アプリケー
 
 ..  code-block:: groovy
     :caption: build.gradle
-    :name: build.gradle-vanilla-reference-2
+    :name: build.gradle-vanilla-reference-3
 
     asakusafw {
         vanilla {
