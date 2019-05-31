@@ -1156,6 +1156,45 @@ Direct I/Oを利用したアプリケーションのテストでは、Direct I/O
 
 詳しくは、:doc:`../testing/user-guide` - データフローのテストデータ作成 - :ref:`testing-userguide-testdata-directio` を参照してください。
 
+入出力データのカウント情報
+==========================
+
+Direct I/Oはバッチアプリケーションの実行終了時に、入出力データのレコード件数やバイト数などの情報を集計してログに出力します。
+
+以下、入出力データのカウント情報の出力例です。
+
+..  code-block:: text
+
+    ...
+    Direct I/O file input: 3 entries
+      itemInfo:
+        number of input records: 9
+        input file size in bytes: 1,017
+      salesDetail:
+        number of input records: 34
+        input file size in bytes: 739
+      storeInfo:
+        number of input records: 5
+        input file size in bytes: 275
+      (TOTAL):
+        number of input records: 48
+        input file size in bytes: 2,031
+    Direct I/O file output: 2 entries
+      categorySummary:
+        number of output records: 3
+        output file size in bytes: 1,326
+      errorRecord:
+        number of output records: 3
+        output file size in bytes: 1,617
+      (TOTAL):
+        number of output records: 6
+        output file size in bytes: 2,943
+
+カウント情報に表示される項目は、アプリケーションで利用する実行エンジン毎に異なります。
+
+..  attention::
+    :doc:`using-hive` を利用した入出力データのカウント情報では、入力データファイルのバイト数 ( ``input file size in bytes`` ) は実際のファイルサイズとは多少異なる値が表示されます。
+
 トランザクションのメンテナンス
 ==============================
 
