@@ -13,7 +13,7 @@ Direct I/O Hive
 Hive連携モジュールの利用方法
 ============================
 
-Hive 連携モジュールを使用する場合は :file:`build.gradle` に対して以下の定義を追加します。
+Hive連携モジュールを使用する場合は :file:`build.gradle` に対して以下の定義を追加します。
 
 * Hive連携モジュール用のアプリケーションSDKライブラリを依存関係に追加する
 
@@ -37,6 +37,37 @@ Hive 連携モジュールを使用する場合は :file:`build.gradle` に対�
 上記の設定後、 :program:`installAsakusafw` タスクを実行して開発環境のAsakusa Frameworkを再インストールします。
 
 Eclipseを利用している場合は、 :program:`eclipse` タスクを実行してEclipseのプロジェクト情報を再構成します。
+
+Hiveのバージョンについて
+---------------------------
+
+Hive連携モジュールはHive実行ライブラリを使用します。
+Asakusa Framework バージョン |version| の標準の設定では、以下のバージョンのHive実行ライブラリが含まれます。
+
+* ``org.apache.hive:hive-exec:1.2.2``
+
+実行環境のHiveとHive連携モジュールが利用するHive実行ライブラリのバージョンが異なる場合、データの互換性に対する注意が必要です。
+また、実行環境のHadoopのバージョンによっては、利用可能なHive実行ライブラリのバージョンに制限が発生することがあります [#]_ 。
+
+Hive連携モジュールのHive実行ライブラリのバージョンを変更するには、以下のように ``build.gradle`` を設定します。
+以下はHive実行ライブラリに ``org.apache.hive:hive-exec:2.3.4`` を使用する例です。
+
+..  code-block:: groovy
+
+    asakusafw {
+        sdk.hive = ['org.apache.hive:hive-exec:2.3.4']
+    }
+
+    asakusafwOrganizer {
+        hive.enabled true
+        hive.libraries = ['org.apache.hive:hive-exec:2.3.4']
+    }
+
+..  note::
+    Asakusa on Sparkが使用する実行環境のSparkにHive実行ライブラリが含まれる場合、Spark側のHive実行ライブラリが優先して使用されることがあります。
+    この場合、Asakusa Frameworkの実行環境に含まれるHive実行ライブラリは無視されます。
+
+..  [#] 一例として、実行環境がHadoop3系の場合、Hive1系の実行ライブラリは使用できないことを確認しています。
 
 カラムナフォーマットファイルの入出力
 ====================================
@@ -135,7 +166,6 @@ ORC File形式の設定
 
 ``format_version`` はDirect I/Oで作成するORC Fileのバージョンを、ファイルを読み込むHiveのバージョンに合わせて指定します。
 例えば、作成したファイルを Hive ``0.11`` で読む場合は、フォーマットバージョンに ``0.11`` と指定します。
-Hiveのバージョンについては 後述の `Hiveのバージョンに関して`_ も合わせて参照してください。
 
 以下はDMDLスクリプトの記述例です。
 
@@ -426,12 +456,6 @@ b) Hiveデータ型とカラムナフォーマットのデータ型とのマッ�
         Hiveのデータ型について詳しくはHiveのドキュメント `LanguageManual Types <https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Types>`_ などを参照してください。
 
 ..  [#] モデルプロパティの型に対して、 `マッピング型変換機能`_ が対応するHiveのデータ型です。
-
-Hiveのバージョンに関して
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Asakusa Framework バージョン |version| では、Direct I/O の Hive連携モジュールにはHiveのバージョン ``1.2.2`` を使用しています。
-実行環境のHiveとAsakusa Frameworkが利用するHiveのバージョンが異なる場合、データの互換性に対する注意が必要です。
 
 マッピング型変換機能
 ^^^^^^^^^^^^^^^^^^^^

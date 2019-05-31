@@ -518,12 +518,14 @@ SDKプロパティ
     * - ``hive``
       - Object
       - false
-      - この値をtrueにするとDirect I/O Hiveライブラリを依存ライブラリに追加する。
-        true または false を指定可能。
+      - この値をtrueにするとDirect I/O Hiveライブラリ、および標準の設定に基づくバージョンのHive実行ライブラリを依存ライブラリに追加する。
+        また、リスト形式でHive実行ライブラリのバージョンを指定することで、任意のバージョンのHive実行ライブラリを依存ライブラリに追加する [#]_ 。
+        true または false 、もしくは ``java.util.List`` を指定可能。
 
 ..  [#] アプリケーションSDKライブラリについては、 :doc:`gradle-plugin` - :ref:`gradle-plugin-dependency-management` も参照してください。
 ..  [#] これらのプロパティは規約オブジェクト :asakusa-gradle-groovydoc:`com.asakusafw.gradle.plugins.AsakusafwSdkExtension` が提供します。
 ..  [#] 標準の設定以外の実行エンジンの利用は非推奨です。
+..  [#] 設定方法の例や詳細については、 :doc:`../directio/using-hive` を参照してください。
 
 Eclipse Pluginの拡張
 --------------------
@@ -733,9 +735,10 @@ Direct I/O Hiveの構成に関する規約プロパティは、 ``asakusafwOrgan
     * - ``libraries``
       - java.util.List
       - ``org.apache.hive:hive-exec:1.2.2``
-      - Directi I/O Hiveが実行時に使用するHiveライブラリ
+      - Directi I/O Hiveが実行時に使用するHiveライブラリ [#]_
 
 ..  [#] これらのプロパティは規約オブジェクト :asakusa-gradle-groovydoc:`com.asakusafw.gradle.plugins.AsakusafwOrganizerPluginConvention.HiveConfiguration` が提供します。
+..  [#] 設定方法の例や詳細については、 :doc:`../directio/using-hive` を参照してください。
 
 テストドライバープロパティ
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
