@@ -53,7 +53,7 @@ Asakusa DSL
 Spark
 -----
 
-本バージョンのAsakusa on Sparkは、Spark 2.3.0 で動作を検証しています。
+本バージョンのAsakusa on Sparkは、Spark 2.3.2 で動作を検証しています。
 
 ..  attention::
     本バージョンのAsakusa on Sparkは、 Spark 1.6.x 以前のバージョンでは動作しません。
