@@ -50,19 +50,19 @@ Asakusa Frameworkを利用したバッチアプリケーションの開発環境
       - 16.04.3
     * - OS
       - Windows
-      - 10 (1709)
+      - 10 (1809)
     * - OS
       - MacOSX [#]_
       - 10.13
     * - Java
       - JDK [#]_ [#]_
-      - 1.8.0_151
+      - 1.8.0_201
     * - ビルドツール
       - Gradle [#]_
       - 4.7
     * - IDE
       - Eclipse IDE for Java Developers
-      - 4.7.1a
+      - 2019-03
     * - IDE
       - IntelliJ IDEA Community Edition [#]_
       - 2017.2.6
