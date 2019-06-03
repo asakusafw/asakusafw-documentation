@@ -1156,6 +1156,8 @@ Direct I/Oを利用したアプリケーションのテストでは、Direct I/O
 
 詳しくは、:doc:`../testing/user-guide` - データフローのテストデータ作成 - :ref:`testing-userguide-testdata-directio` を参照してください。
 
+.. _directio-counter:
+
 入出力データのカウント情報
 ==========================
 

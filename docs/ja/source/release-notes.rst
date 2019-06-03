@@ -5,6 +5,51 @@
 Asakusa Frameworkのリリースノートです。
 すべての変更点は :doc:`changelogs` を参照してください。
 
+Release 0.10.3
+==============
+
+(開発中)
+
+`Asakusa Framework 0.10.3 documentation`_
+
+..  _`Asakusa Framework 0.10.3 documentation`: https://docs.asakusafw.com/0.10.3/release/ja/html/index.html
+
+新機能と主な変更点
+------------------
+
+Direct I/O JSON (試験的機能)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Direct I/OでJSON形式を持つテキストファイルを読み書きするための汎用的な機能を提供する :doc:`../directio/directio-json` を追加しました。
+
+Direct I/O JSONでは、 `JSON Lines`_ 呼ばれる、JSONの1レコードを1行で格納し、レコード間を改行で区切る形式もサポートしています。
+JSON Lines形式の入力ファイルは分割して処理を行うことができるため、通常のJSON形式に比べて高速にファイルの入力処理を実行できる可能性があります。
+
+Direct I/O JSONで出力するファイルの形式は、JSON Lines形式となります。
+
+詳しくは、以下のドキュメントを参照してください。
+
+* :doc:`../directio/directio-json`
+
+..  _`JSON Lines`: http://jsonlines.org/
+
+その他の変更点
+~~~~~~~~~~~~~~
+
+* :ref:`logging-operator` 上限境界の無い型引数を定義することができない不具合の修正
+* :doc:`directio/using-hive` 指定可能なHive実行ライブラリのバージョンに、バージョン1系(例: ``1.2.2`` )に加えてバージョン2系(例: ``2.3.4`` )を追加
+* :doc:`directio/using-hive` 実行ログに表示される入出力データのカウント情報に誤った値が表示される不具合の修正（一部制約事項があります。詳しくは :doc:`directio/user-guide` - :ref:`directio-counter` を参照してください）
+* :doc:`spark/index` Direct I/Oの出力ファイル名のパターンに「ランダムな値」を指定することができない不具合の修正
+* :doc:`m3bp/index` Hadoopバージョン3系など一部のHadoop環境でネイティブライブラリの検出に失敗する不具合の修正
+
+その他、細かな機能改善およびバグフィックスが含まれます。
+すべての変更点は :doc:`changelogs` を参照してください。
+
+互換性に関して
+--------------
+
+本リリースでは過去バージョンとの互換性に関する特別な情報はありません。
+
 Release 0.10.2
 ==============
 
