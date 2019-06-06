@@ -22,7 +22,7 @@ Direct I/O JSON (試験的機能)
 
 Direct I/OでJSON形式を持つテキストファイルを読み書きするための汎用的な機能を提供する :doc:`../directio/directio-json` を追加しました。
 
-Direct I/O JSONでは、 `JSON Lines`_ 呼ばれる、JSONの1レコードを1行で格納し、レコード間を改行で区切る形式もサポートしています。
+Direct I/O JSONでは `JSON Lines`_ と呼ばれる、JSONの1レコードを1行で格納し、レコード間を改行で区切る形式もサポートしています。
 JSON Lines形式の入力ファイルは分割して処理を行うことができるため、通常のJSON形式に比べて高速にファイルの入力処理を実行できる可能性があります。
 
 Direct I/O JSONで出力するファイルの形式は、JSON Lines形式となります。
