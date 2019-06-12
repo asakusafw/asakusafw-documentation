@@ -55,7 +55,7 @@ Gradle Pluginのバージョンを自動的に適用し、これらを単一の�
             maven { url 'http://asakusafw.s3.amazonaws.com/maven/releases' }
         }
         dependencies {
-            classpath group: 'com.asakusafw.gradle', name: 'asakusa-distribution', version: '0.10.3'
+            classpath group: 'com.asakusafw.gradle', name: 'asakusa-distribution', version: '0.10.4'
         }
     }
 

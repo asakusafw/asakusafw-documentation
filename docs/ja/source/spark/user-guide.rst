@@ -82,7 +82,7 @@ Asakusa on Sparkが動作を検証しているHadoopディストリビューシ�
 
 Asakusa on Sparkを利用する構成を持つアプリケーション開発用のプロジェクトテンプレートは、以下リンクからダウンロードします。
 
-* `asakusa-spark-template-0.10.3.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.3.tar.gz>`_
+* `asakusa-spark-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.4.tar.gz>`_
 
 ..  seealso::
     プロジェクトテンプレートの構成や利用方法については、 :doc:`../application/gradle-plugin` を参照してください。
