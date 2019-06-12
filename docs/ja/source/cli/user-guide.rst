@@ -38,15 +38,15 @@ Asakusa CLIの各機能は :program:`asakusa` コマンドを通して利用し�
 ..  code-block:: sh
 
     $ asakusa
-    Usage: asakusa <command> <command options>
+    使用方法: asakusa <command> <command options>
 
-    The available commands are:
-        generate - Generates resources from DSL information.
-        list - Displays DSL information as list style.
-        run - Runs a batch application.
-        version - Displays Asakusa Framework version.
+    利用可能なコマンドの一覧:
+        generate - DSLの情報からリソースを生成する。
+        list - DSLの情報をリスト形式で表示する。
+        run - バッチアプリケーションを実行する。
+        version - Asakusa Frameworkのバージョン情報を表示する。
 
-    See 'asakusa <command> --help' for more information on a specific command.
+    各コマンドの詳しい情報は 'asakusa <command> --help' を参照してください。
 
 上記が表示されず、エラーメッセージが表示されてしまう場合には、セットアップ環境を確認してください。
 
@@ -120,11 +120,11 @@ Asakusa CLIの各機能は :program:`asakusa` コマンドを通して利用し�
         Usage: asakusa run [options] batch-ID
           Options:
             -A, --batch-argument
-              Defines a batch argument.
+              バッチ引数を指定する。
               Syntax: -Akey=value
               Default: {}
             -B, --batchapps
-              Batch application base directory (ASAKUSA_BATCHAPPS_HOME).
+              バッチアプリケーションのベースディレクトリー (ASAKUSA_BATCHAPPS_HOME)。
             ...
 
 コマンドリファレンス
