@@ -81,11 +81,11 @@ Asakusa Gradle Pluginを使った標準的なアプリケーション開発環�
 
     * - プロジェクトテンプレート
       - 説明
-    * - `asakusa-spark-template-0.10.3.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.3.tar.gz>`_
+    * - `asakusa-spark-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.4.tar.gz>`_
       - :doc:`../spark/index` を利用するプロジェクトテンプレート
-    * - `asakusa-m3bp-template-0.10.3.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.3.tar.gz>`_
+    * - `asakusa-m3bp-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.4.tar.gz>`_
       - :doc:`../m3bp/index` を利用するプロジェクトテンプレート
-    * - `asakusa-mapreduce-template-0.10.3.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-mapreduce-template-0.10.3.tar.gz>`_
+    * - `asakusa-mapreduce-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-mapreduce-template-0.10.4.tar.gz>`_
       - :doc:`../mapreduce/index` を利用するプロジェクトテンプレート
 
 また、Asakusa Frameworkの `サンプルプログラム集 (GitHub)`_ では、サンプルアプリケーションのソースコード一式を含むサンプルアプリケーションプロジェクトを公開しています。
@@ -107,9 +107,9 @@ Asakusa Gradle Pluginを使った標準的なアプリケーション開発環�
 ..  code-block:: sh
 
     cd ~/Downloads
-    curl -OL https://github.com/asakusafw/asakusafw-examples/archive/0.10.3.tar.gz
-    tar xf 0.10.3.tar.gz
-    cp -a asakusafw-examples-0.10.3/example-basic-spark ~/workspace
+    curl -OL https://github.com/asakusafw/asakusafw-examples/archive/0.10.4.tar.gz
+    tar xf 0.10.4.tar.gz
+    cp -a asakusafw-examples-0.10.4/example-basic-spark ~/workspace
 
 プロジェクトレイアウト
 ----------------------
