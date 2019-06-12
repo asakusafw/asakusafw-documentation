@@ -38,20 +38,20 @@ Direct I/O CLIの各機能は :program:`directio` コマンドを通して利用
 ..  code-block:: sh
 
     $ directio
-    Usage: directio <command> <command options>
+    使用方法: directio <command> <command options>
 
-    The available commands are:
-        configuration - Displays Direct I/O configuration.
-        copy - Copies files on Direct I/O data source.
-        delete - Removes Direct I/O resources.
-        get - Copies Direct I/O resources onto local file system.
-        list - Displays list of Direct I/O resources.
-        mkdir - Creates directories on Direct I/O data source.
-        move - Renames files on Direct I/O data source.
-        put - Copies local files onto Direct I/O data source.
-        transaction - Manipulates Direct I/O transactions.
+    利用可能なコマンドの一覧:
+        configuration - Direct I/O の各種設定情報を表示する。
+        copy - Direct I/O データソース上でリソースのコピーを行う。
+        delete - Direct I/O のリソースを削除する。
+        get - Direct I/O のリソースをローカルファイルシステム上にコピーする。
+        list - Direct I/O のリソースを一覧表示する。
+        mkdir - Direct I/O のデータソース上にディレクトリーを作成する。
+        move - Direct I/O のデータソース上でリソースの移動を行う。
+        put - ローカルファイルを Direct I/O のデータソースにコピーする。
+        transaction - Direct I/O のトランザクションを操作する。
 
-    See 'directio <command> --help' for more information on a specific command.
+    各コマンドの詳しい情報は 'directio <command> --help' を参照してください。
 
 上記が表示されず、エラーメッセージが表示されてしまう場合には、セットアップ環境を確認してください。
 
@@ -175,10 +175,10 @@ Asakusa Frameworkが利用するHadoop環境(Hadoopライブラリーや :progra
         Usage: directio list [options] [directio-path..]
           Options:
             --conf, --configuration
-              Hadoop custom configuration file path.
+              Hadoopの追加設定ファイルのパスを指定する。
               Default: /home/asakusa/asakusa/core/conf/asakusa-resources.xml
             -s, --data-source
-              Data source ID instead of inferring from path.
+              データソースIDを直接指定する（パスから推定したものを無視）。
             ...
 
 コマンドリファレンス
