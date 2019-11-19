@@ -23,7 +23,7 @@ DMDLのレコードモデル、結合モデル、集計モデルをそれぞれ�
 
 なお、DMDLジェネレータはインフォメーションスキーマ [#]_ を利用してメタデータを分析しています。
 
-..  [#] http://dev.mysql.com/doc/refman/5.1/ja/information-schema.html
+..  [#] https://dev.mysql.com/doc/refman/5.1/ja/information-schema.html
 
 テーブル定義 (レコードモデル)
 -----------------------------

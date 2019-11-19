@@ -227,7 +227,7 @@ YAESSは様々な環境に対応するための数多くの設定や、実行状
 :program:`asakusa generate` - DSL情報からデータフロー構造やコンパイル後の実行計画などのグラフ情報を生成
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-:program:`asakusa generate` の機能例として、グラフ表示ツール `Graphviz <http://www.graphviz.org/>`_ などと連携して
+:program:`asakusa generate` の機能例として、グラフ表示ツール `Graphviz <https://www.graphviz.org/>`_ などと連携して
 以下のようなバッチアプリケーションのデータフロー構造を示すフローグラフを生成することができます。
 
 ..  figure:: cli/attachment/operator-graph.png

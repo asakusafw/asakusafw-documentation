@@ -108,7 +108,7 @@
 
 ドキュメントは Sphinx_ でビルド可能な reStructuredText_ 形式で記述し、拡張子は :file:`*.rst` とする。
 
-..  _Sphinx : http://sphinx.pocoo.org/
+..  _Sphinx : https://www.sphinx-doc.org/
 ..  _reStructuredText : http://docutils.sourceforge.net/rst.html
 
 日本語

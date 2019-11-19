@@ -28,9 +28,9 @@ SQL on Hadoop 周辺プロダクトとの連携
 
 SQL on Hadoopとも呼ばれるこのようなプロダクトのうち、オープンソースソフトウェアとして提供されているプロダクトの一例を以下に挙げます。
 
-* `Impala <http://impala.io/>`_
-* `Presto <http://prestodb.io/>`_
-* `Apache Drill <http://incubator.apache.org/drill/>`_
+* `Impala <https://impala.io/>`_
+* `Presto <https://prestodb.io/>`_
+* `Apache Drill <https://drill.apache.org/>`_
 
 ..  attention::
     各プロダクトはそれぞれHiveとの互換性に関する機能が異なり、また同プロダクトのバージョンによっても機能が異なるため、Asakusa Frameworkが提供するHive連携機能との互換性についても対応状況は様々です。詳しくは各プロダクトのドキュメントを参照してください。
@@ -100,7 +100,7 @@ Asakusa Frameworkの `サンプルプログラム集 (GitHub)`_ にDirect I/O Hi
 
 * https://github.com/asakusafw/asakusafw-examples/tree/0.9.0/example-directio-hive
 
-..  _`サンプルプログラム集 (GitHub)`: http://github.com/asakusafw/asakusafw-examples
+..  _`サンプルプログラム集 (GitHub)`: https://github.com/asakusafw/asakusafw-examples
 
 Hiveテーブルの作成
 ==================

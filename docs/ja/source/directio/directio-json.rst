@@ -7,7 +7,7 @@ Direct I/O JSON
 ..  experimental::
     Asakusa Framework バージョン |version| では、 Direct I/O JSON は試験的機能として提供しています。
 
-..  [#] http://json.org/
+..  [#] https://json.org/
 ..  [#] http://jsonlines.org/
 
 概要

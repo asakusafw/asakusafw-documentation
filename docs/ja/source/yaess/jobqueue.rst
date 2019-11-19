@@ -109,8 +109,8 @@ JobQueueサーバーは、Servlet API 3.0に対応したサーブレットコン
 Tomcatの構築手順やSSL、ベーシック認証の設定等は、Tomcatの公式ドキュメント [#]_ 等を参考にしてください。
 以降、Tomcatをインストールしたディレクトリを、 ``${CATALINA_HOME}`` と表記します。
 
-..  [#] http://tomcat.apache.org
-..  [#] http://tomcat.apache.org/tomcat-7.0-doc/index.html
+..  [#] https://tomcat.apache.org
+..  [#] https://tomcat.apache.org/tomcat-7.0-doc/index.html
 
 JobQueueサーバー・コンポーネントのインストール
 ----------------------------------------------

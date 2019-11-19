@@ -38,8 +38,8 @@ Asakusa Framework バージョン |version| では、開発環境で利用する
 
 ..  [#] 例えば、Mapが提供するMapRFSを操作するためには、MapRFS操作用のライブラリが必要となります。
 
-..  _`Apache Hadoop`: http://hadoop.apache.org/
-..  _`Hadoop Releases`: http://hadoop.apache.org/releases.html
+..  _`Apache Hadoop`: https://hadoop.apache.org/
+..  _`Hadoop Releases`: https://hadoop.apache.org/releases.html
 
 開発環境向けのHadoopのセットアップ
 ==================================
@@ -61,7 +61,7 @@ Apache Hadoopのインストール
     sudo mv hadoop-*/ /usr/lib
     sudo ln -s /usr/lib/hadoop-* /usr/lib/hadoop
 
-..  _`Apache Hadoopのダウンロードページ`: http://hadoop.apache.org/releases.html#Download
+..  _`Apache Hadoopのダウンロードページ`: https://hadoop.apache.org/releases.html#Download
 
 環境変数の設定
 --------------

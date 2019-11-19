@@ -6,7 +6,7 @@
 
 本書ではテストケースの実装に `JUnit`_ を利用します。
 
-..  _`JUnit`: http://www.junit.org/
+..  _`JUnit`: https://www.junit.org/
 
 .. _testing-userguide-operator-testing:
 

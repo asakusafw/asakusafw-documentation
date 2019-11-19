@@ -80,7 +80,7 @@ Gradle上でのテストドライバー実行
 `エミュレーションモードの設定`_ を有効化した状態でGradleの :program:`test` タスクを実行すると、テストドライバーがエミュレーションモードで実行されます。
 
 ..  tip::
-    エミュレーションモードを有効にして Gradle上でテストを実行すると、Gradleが提供する `JaCoCo Plugin <http://www.gradle.org/docs/current/userguide/jacoco_plugin.html>`_ などのソースコードカバレッジ取得機能との連携が可能になります。
+    エミュレーションモードを有効にして Gradle上でテストを実行すると、Gradleが提供する `JaCoCo Plugin <https://www.gradle.org/docs/current/userguide/jacoco_plugin.html>`_ などのソースコードカバレッジ取得機能との連携が可能になります。
 
 ..  attention::
     Asakusa Framework バージョン |version| において、Windows上でエミュレーションモードを有効してテストドライバーを実行した際に以下のようなエラーログが出力されることがありますが、動作上は問題ありません。

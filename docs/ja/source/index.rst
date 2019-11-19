@@ -10,7 +10,7 @@ Asakusa Frameworkは分散処理技術を活かしたバッチアプリケーシ
 
 このサイトでは、Asakusa Frameworkの開発運用時の利用方法や、フレームワーク内部の技術的な情報を提供します。
 
-Asakusa Frameworkの適用事例などについてはコミュニティサイト (http://asakusafw.com) も参考にしてください。
+Asakusa Frameworkの適用事例などについてはコミュニティサイト (https://asakusafw.com) も参考にしてください。
 
 ドキュメント
 ============
@@ -71,8 +71,8 @@ Asakusa Framework入門
 * :apiref:`APIリファレンス <index.html>`
 * :epub:`ePub版のダウンロード <AsakusaFramework.epub>`
 
-..  _`ソースリポジトリ (GitHub)`: http://github.com/asakusafw/asakusafw
-..  _`サンプルプログラム集 (GitHub)`: http://github.com/asakusafw/asakusafw-examples
+..  _`ソースリポジトリ (GitHub)`: https://github.com/asakusafw/asakusafw
+..  _`サンプルプログラム集 (GitHub)`: https://github.com/asakusafw/asakusafw-examples
 ..  _`課題管理 (GitHub)`: https://github.com/asakusafw/asakusafw-issues/issues
 ..  _`ビルドサーバー(Jenkins)`: https://ci.asakusafw.com
 

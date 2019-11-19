@@ -15,8 +15,8 @@ Asakusa Framework バージョン |version| では主に `Oracle JDK`_ で動作
 ..  attention::
     :jinrikisha:`Jinrikisha <index.xml>` を使って開発環境を構築する場合、試用を目的として `Open JDK`_ を使ったセットアップを行う機能を提供していますが、 `Open JDK`_ では簡単な動作検証のみを行なっているため、試用目的以外の用途でAsakusa Frameworkを使用する場合は `Oracle JDK`_ を利用してください。
 
-..  _`Oracle JDK`: http://www.oracle.com/technetwork/jp/java/javase/index.html
-..  _`Open JDK`: http://openjdk.java.net/
+..  _`Oracle JDK`: https://www.oracle.com/technetwork/jp/java/javase/index.html
+..  _`Open JDK`: https://openjdk.java.net/
 
 JDKのインストール
 -----------------

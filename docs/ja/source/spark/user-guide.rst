@@ -5,7 +5,7 @@ Asakusa on Spark ユーザガイド
 この文書では、 `Asakusa Framework`_ を使って作成したバッチアプリケーションを `Apache Spark`_ 上で実行する方法について説明します。
 
 ..  _`Asakusa Framework`: https://docs.asakusafw.com/latest/release/ja/html/index.html
-..  _`Apache Spark`: http://spark.apache.org/
+..  _`Apache Spark`: https://spark.apache.org/
 
 概要
 ====
@@ -82,7 +82,7 @@ Asakusa on Sparkが動作を検証しているHadoopディストリビューシ�
 
 Asakusa on Sparkを利用する構成を持つアプリケーション開発用のプロジェクトテンプレートは、以下リンクからダウンロードします。
 
-* `asakusa-spark-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.4.tar.gz>`_
+* `asakusa-spark-template-0.10.4.tar.gz <https://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.4.tar.gz>`_
 
 ..  seealso::
     プロジェクトテンプレートの構成や利用方法については、 :doc:`../application/gradle-plugin` を参照してください。
@@ -94,7 +94,7 @@ Asakusa on Sparkを利用する構成を持つアプリケーション開発用�
 
 このプロジェクトはAsakusa on Spark用のプロジェクトテンプレートに対して、 :doc:`../introduction/start-guide` などで説明しているサンプルアプリケーション「カテゴリー別売上金額集計バッチ」用のソースコードが追加されています。
 
-..  _`サンプルプログラム集 (GitHub)`: http://github.com/asakusafw/asakusafw-examples
+..  _`サンプルプログラム集 (GitHub)`: https://github.com/asakusafw/asakusafw-examples
 
 Asakusa on Spark Gradle Plugin
 ------------------------------

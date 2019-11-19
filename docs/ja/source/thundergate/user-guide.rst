@@ -18,7 +18,7 @@ ThunderGateと連携したバッチアプリケーションを作成する場合
 ---------
 ThunderGateが対応するRDBMSは ``MySQL`` [#]_ [#]_  のみとなっています。ThunderGateはインポートとエクスポートに ``MySQL`` に依存した処理を実行することでMySQL向けに最適化されています。
 
-..  [#] http://www.mysql.com/
+..  [#] https://www.mysql.com/
 ..  [#] 対応しているバージョンの詳細については、 :doc:`../product/target-platform` を参照してください。
 
 プロセスの概要
@@ -566,7 +566,7 @@ ThunderGateは内部のログ表示に ``Log4J`` [#]_ を利用しています�
     * - ``logfile.basename``
       - プロセス名
 
-..  [#] http://logging.apache.org/log4j/1.2/
+..  [#] https://logging.apache.org/log4j/1.2/
 
 ..  warning::
     ThunderGateのHadoopクライアントマシンの設定では、ログを標準出力に出力しないようにしてください。

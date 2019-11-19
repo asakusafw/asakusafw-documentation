@@ -21,8 +21,8 @@ Asakusa Frameworkは、Hadoop [#]_ やSpark [#]_ , |M3BP_ENGINE| [#]_ といっ�
 
 Asakusa Frameworkは長いライフサイクルをもつバッチアプリケーションに対して、プラットフォームの改善を促進しつつ、優れた開発生産性、運用性を導入することで、堅牢で持続力のあるバッチ処理基盤を構築することを支援します。
 
-..  [#] http://hadoop.apache.org/
-..  [#] http://spark.apache.org/
+..  [#] https://hadoop.apache.org/
+..  [#] https://spark.apache.org/
 ..  [#] https://github.com/fixstars/m3bp
 
 Asakusa Frameworkの構成

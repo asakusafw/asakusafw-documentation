@@ -106,32 +106,32 @@ WindGate
     * - Product
       - Link
     * - Apache Hadoop
-      - http://hadoop.apache.org/
+      - https://hadoop.apache.org/
     * - Hortonworks Data Platform
-      - http://hortonworks.com/hdp/
+      - https://www.cloudera.com/products/hdp.html
     * - MapR
-      - http://www.mapr.com/
+      - https://www.mapr.com/
     * - Cloudera CDH
-      - http://www.cloudera.com/content/cloudera/en/products-and-services/cdh.html
+      - https://www.cloudera.com/products/open-source/apache-hadoop/key-cdh-components.html
     * - Amazon EMR
-      - http://aws.amazon.com/elasticmapreduce/
+      - https://aws.amazon.com/elasticmapreduce/
     * - Microsoft Azure HDInsight
       - https://azure.microsoft.com/services/hdinsight/
     * - CentOS
-      - http://www.centos.org/
+      - https://www.centos.org/
     * - Ubuntu
-      - http://www.ubuntu.com/
+      - https://www.ubuntu.com/
     * - Windows
-      - http://windows.microsoft.com/
+      - https://windows.microsoft.com/
     * - MacOSX
-      - http://www.apple.com/osx/
+      - https://www.apple.com/osx/
     * - JDK (Java SE)
-      - http://www.oracle.com/technetwork/java/javase/index.html
+      - https://www.oracle.com/technetwork/java/javase/index.html
     * - Gradle
-      - http://www.gradle.org/
+      - https://www.gradle.org/
     * - Eclipse
-      - http://www.eclipse.org/
+      - https://www.eclipse.org/
     * - IntelliJ IDEA
       - https://www.jetbrains.com/idea/
     * - PostgreSQL
-      - http://www.postgresql.org/
+      - https://www.postgresql.org/

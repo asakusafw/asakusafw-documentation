@@ -2,7 +2,7 @@
 Asakusa Gradle Plugin ユーザーガイド
 ====================================
 
-この文書では、\ `Gradle <http://www.gradle.org/>`_\ にAsakusa Framework を使ったアプリケーションの開発やデプロイを行うための機能を追加するAsakusa Gradle Pluginについて説明します。
+この文書では、\ `Gradle <https://www.gradle.org/>`_\ にAsakusa Framework を使ったアプリケーションの開発やデプロイを行うための機能を追加するAsakusa Gradle Pluginについて説明します。
 
 概要
 ====
@@ -16,20 +16,20 @@ Asakusa Gradle Pluginは、Asakusa Framework用のGradle拡張プラグイン群
 Asakusa Gradle Pluginを利用するにはJava(JDK)がインストールされている必要があります。
 これらの導入方法については、 :doc:`../introduction/start-guide` - :ref:`startguide-development-environment` などを参考にしてください。
 
-なお、Gradleのインストールについては、本書では `Gradleラッパー <http://www.gradle.org/docs/current/userguide/gradle_wrapper.html>`_ と呼ばれるGradleを利用するためのコマンドを使う方法を推奨しています。
+なお、Gradleのインストールについては、本書では `Gradleラッパー <https://www.gradle.org/docs/current/userguide/gradle_wrapper.html>`_ と呼ばれるGradleを利用するためのコマンドを使う方法を推奨しています。
 この方法に沿ってGradleを利用する場合は前もってGradleをインストールする必要はありません。
 詳しくは後述の `Asakusa Gradle Pluginの導入`_ を参考にしてください。
 
 Gradleについて
 --------------
 
-`Gradle <http://www.gradle.org/>`_  はオープンソースプロジェクトとして開発されている様々なプラットフォームに対応したビルドシステムです。
+`Gradle <https://www.gradle.org/>`_  はオープンソースプロジェクトとして開発されている様々なプラットフォームに対応したビルドシステムです。
 シンプルかつ拡張性の高いビルド定義を行うためのDSLやプラグイン機構を持ち、他のビルドシステムとの連携を含む様々な方式に対応した依存性管理のメカニズムを有しているなど多くの特徴を持っています。
 
 Gradleに関する詳しい情報は、以下のドキュメントなどを参考にしてください。
 
-*  `Gradle Documentation <http://www.gradle.org/documentation>`_  (Gradleの公式ドキュメントサイト)
-*  `Gradle 日本語ドキュメント <http://gradle.monochromeroad.com/docs/>`_  (公式ドキュメントの翻訳サイト)
+*  `Gradle Documentation <https://docs.gradle.org/>`_  (Gradleの公式ドキュメントサイト)
+*  `Gradle 日本語ドキュメント <https://gradle.monochromeroad.com/docs/>`_  (公式ドキュメントの翻訳サイト)
 
 関連プロダクト
 ==============
@@ -57,7 +57,7 @@ Asakusa Gradle Plugin を利用する方法として、以下のいずれかの�
 1)は、Asakusa Gradle Pluginの利用設定が行われたビルドスクリプト、及び標準的なプロジェクトレイアウトを含むプロジェクトテンプレートを利用する方法です。
 Asakusa Gradle Pluginを使った標準的なアプリケーション開発環境を導入するにはこのテンプレートを使うと便利です。
 
-このプロジェクトテンプレートには  `Gradleラッパー <http://www.gradle.org/docs/current/userguide/gradle_wrapper.html>`_  と呼ばれるGradleを利用するコマンドが含まれます。
+このプロジェクトテンプレートには  `Gradleラッパー <https://www.gradle.org/docs/current/userguide/gradle_wrapper.html>`_  と呼ばれるGradleを利用するコマンドが含まれます。
 このコマンドを利用することで、Gradle自体の導入設定は不要となり、すぐにこのプロジェクト上で開発を始めることができます。
 
 現在のところ、プロジェクトテンプレートは利用するプラットフォームに応じた初期設定が導入された複数種類のテンプレートを公開しています。
@@ -81,16 +81,16 @@ Asakusa Gradle Pluginを使った標準的なアプリケーション開発環�
 
     * - プロジェクトテンプレート
       - 説明
-    * - `asakusa-spark-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.4.tar.gz>`_
+    * - `asakusa-spark-template-0.10.4.tar.gz <https://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.4.tar.gz>`_
       - :doc:`../spark/index` を利用するプロジェクトテンプレート
-    * - `asakusa-m3bp-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.4.tar.gz>`_
+    * - `asakusa-m3bp-template-0.10.4.tar.gz <https://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.4.tar.gz>`_
       - :doc:`../m3bp/index` を利用するプロジェクトテンプレート
-    * - `asakusa-mapreduce-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-mapreduce-template-0.10.4.tar.gz>`_
+    * - `asakusa-mapreduce-template-0.10.4.tar.gz <https://www.asakusafw.com/download/gradle-plugin/asakusa-mapreduce-template-0.10.4.tar.gz>`_
       - :doc:`../mapreduce/index` を利用するプロジェクトテンプレート
 
 また、Asakusa Frameworkの `サンプルプログラム集 (GitHub)`_ では、サンプルアプリケーションのソースコード一式を含むサンプルアプリケーションプロジェクトを公開しています。
 
-..  _`サンプルプログラム集 (GitHub)`: http://github.com/asakusafw/asakusafw-examples
+..  _`サンプルプログラム集 (GitHub)`: https://github.com/asakusafw/asakusafw-examples
 
 プロジェクトの配置
 ------------------

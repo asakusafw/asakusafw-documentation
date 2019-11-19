@@ -20,7 +20,7 @@
 Asakusa Frameworkの適用領域においても、中間結果が全てメモリ上に収まる規模のバッチにおいてはAsakusa on Sparkよりも高速で、かつ高いコストパフォーマンスになることを確認しています [#]_ 。
 
 .. [#] https://github.com/fixstars/m3bp
-.. [#] http://www.asakusafw.com/techinfo/reference.html
+.. [#] https://www.asakusafw.com/techinfo/reference.html
 
 構成
 ====
@@ -145,7 +145,7 @@ Hadoopとの連携方法は、 `Hadoopとの連携`_ を参照してください
 
 |M3BP_FEATURE|\ を利用する構成を持つアプリケーション開発用のプロジェクトテンプレートは、以下リンクからダウンロードします。
 
-* `asakusa-m3bp-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.4.tar.gz>`_
+* `asakusa-m3bp-template-0.10.4.tar.gz <https://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.4.tar.gz>`_
 
 ..  seealso::
     プロジェクトテンプレートの構成や利用方法については、 :doc:`../application/gradle-plugin` を参照してください。
@@ -157,7 +157,7 @@ Hadoopとの連携方法は、 `Hadoopとの連携`_ を参照してください
 
 このプロジェクトは |M3BP_FEATURE|\ 用のプロジェクトテンプレートに対して、 :doc:`../introduction/start-guide` などで説明しているサンプルアプリケーション「カテゴリー別売上金額集計バッチ」用のソースコードが追加されています。
 
-..  _`サンプルプログラム集 (GitHub)`: http://github.com/asakusafw/asakusafw-examples
+..  _`サンプルプログラム集 (GitHub)`: https://github.com/asakusafw/asakusafw-examples
 
 ..  _user-guide-gradle-plugin:
 

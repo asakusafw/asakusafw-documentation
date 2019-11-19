@@ -43,7 +43,7 @@ Asakusa Gradle Pluginのバージョン変更
 
     buildscript {
         repositories {
-            maven { url 'http://asakusafw.s3.amazonaws.com/maven/releases' }
+            maven { url 'https://asakusafw.s3.amazonaws.com/maven/releases' }
         }
         dependencies {
             classpath group: 'com.asakusafw.gradle', name: 'asakusa-distribution', version: '0.10.4'
