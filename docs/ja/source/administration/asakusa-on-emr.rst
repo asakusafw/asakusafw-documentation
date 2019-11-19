@@ -15,11 +15,11 @@ Amazon EMR上でAsakusa Frameworkを利用する
 
 AWSが提供する各サービスの詳細はAWSが提供するドキュメントを参照してください。
 
-..  _`Amazon Web Services`: http://aws.amazon.com/
-..  _`Amazon EMR`: http://aws.amazon.com/emr/
-..  _`Amazon Simple Storage Service`: http://aws.amazon.com/s3/
-..  _`Amazon EMR Management Guide`: http://docs.aws.amazon.com/ElasticMapReduce/latest/ManagementGuide/
-..  _`Amazon EMR Release Guide`: http://docs.aws.amazon.com/ElasticMapReduce/latest/ReleaseGuide/
+..  _`Amazon Web Services`: https://aws.amazon.com/
+..  _`Amazon EMR`: https://aws.amazon.com/emr/
+..  _`Amazon Simple Storage Service`: https://aws.amazon.com/s3/
+..  _`Amazon EMR Management Guide`: https://docs.aws.amazon.com/ElasticMapReduce/latest/ManagementGuide/
+..  _`Amazon EMR Release Guide`: https://docs.aws.amazon.com/ElasticMapReduce/latest/ReleaseGuide/
 
 はじめに
 ========
@@ -46,9 +46,9 @@ AWSへのサインアップ
 Amazon S3バケットの作成
   `Amazon Simple Storage Service の使用開始`_ ( `Amazon S3 入門ガイド`_ )
 
-..  _`アカウント作成の流れ | アマゾン ウェブ サービス（AWS 日本語）`: http://aws.amazon.com/jp/register-flow/
-..  _`Amazon Simple Storage Service の使用開始`: http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/gsg/GetStartedWithS3.html
-..  _`Amazon S3 入門ガイド`: http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/gsg/GetStartedWithS3.html
+..  _`アカウント作成の流れ | アマゾン ウェブ サービス（AWS 日本語）`: https://aws.amazon.com/jp/register-flow/
+..  _`Amazon Simple Storage Service の使用開始`: https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/gsg/GetStartedWithS3.html
+..  _`Amazon S3 入門ガイド`: https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/gsg/GetStartedWithS3.html
 
 AWSサービスの操作
 -----------------
@@ -65,8 +65,8 @@ EMRやS3など、AWSが提供する各サービスに対する操作には以下
 
 AWSで利用可能な操作の詳細やツールのセットアップ方法などは、各サービスのドキュメントを参照してください。
 
-..  _`AWSマネジメントコンソール`: http://aws.amazon.com/jp/console/
-..  _`AWSコマンドラインインターフェイス`: http://aws.amazon.com/jp/cli/
+..  _`AWSマネジメントコンソール`: https://aws.amazon.com/jp/console/
+..  _`AWSコマンドラインインターフェイス`: https://aws.amazon.com/jp/cli/
 
 Asakusa Framework実行環境の構成とデプロイ
 =========================================
@@ -173,7 +173,7 @@ S3に対するファイルアップロードは `AWSマネジメントコンソ�
 ..  figure:: images/s3-console.png
     :width: 80%
 
-..  _`バケットにオブジェクトを追加`: http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/gsg/PuttingAnObjectInABucket.html
+..  _`バケットにオブジェクトを追加`: https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/gsg/PuttingAnObjectInABucket.html
 
 CLI
 ~~~
@@ -343,7 +343,7 @@ CLI
     上記例の ``--query`` オプションによって全体の出力から結果ステータスの項目を抽出しています。
 
     :program:`aws` コマンドには他にも様々なオプションが利用できます。
-    詳しくは AWS CLI Reference の `Command Reference <http://docs.aws.amazon.com/cli/latest/index.html>`_ などを参照してください。
+    詳しくは AWS CLI Reference の `Command Reference <https://docs.aws.amazon.com/cli/latest/index.html>`_ などを参照してください。
 
 主なステータスには以下のようなものがあります。
 

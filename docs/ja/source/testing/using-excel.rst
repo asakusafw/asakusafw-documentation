@@ -127,7 +127,7 @@ Excelのセルの形式を強制的に文字列として指定するには、セ
     テストドライバーでは数式の評価や実行に `Apache POI`_ の機能を利用しています。
     利用可能な数式やその制限などについては `Apache POI`_ の情報を確認してください。
 
-..  _`Apache POI`: http://poi.apache.org/
+..  _`Apache POI`: https://poi.apache.org/
 
 テスト条件
 ==========

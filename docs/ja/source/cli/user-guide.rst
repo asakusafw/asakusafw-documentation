@@ -855,7 +855,7 @@ SLF4JのSimpleLogger [#]_ のシステムプロパティを環境変数 ``ASAKUS
     * - :ref:`asakusa-cmd-generate-ddl`
       - DDLスクリプトを生成する
 
-..  [#] http://www.graphviz.org/
+..  [#] https://www.graphviz.org/
 
 ..  _`asakusa-cmd-generate-dot`:
 

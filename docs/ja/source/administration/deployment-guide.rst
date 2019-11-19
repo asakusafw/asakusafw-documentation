@@ -22,7 +22,7 @@ Hadoopクラスターの具体的な構築手順は、利用するHadoopディ�
 また、SparkのセットアップはHadoopディストリビューションが提供するSparkを利用する方法や、
 `Apache Sparkのダウンロードサイト`_ からSparkの実行バイナリを入手してセットアップする方法などがあります。
 
-..  _Apache Sparkのダウンロードサイト: http://spark.apache.org/downloads.html
+..  _Apache Sparkのダウンロードサイト: https://spark.apache.org/downloads.html
 
 |M3BP_FEATURE| 実行環境
 -----------------------
@@ -181,7 +181,7 @@ Hiveライブラリの指定
     :name: build.gradle-deployment-guide-3
 
     repositories {
-        maven { url 'http://repository.mapr.com/maven/' }
+        maven { url 'https://repository.mapr.com/maven/' }
     }
 
     asakusafwOrganizer {

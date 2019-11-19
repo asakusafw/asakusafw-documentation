@@ -53,7 +53,7 @@ Graphvizによるグラフの生成
 
 グラフ生成ツールである Graphviz [#]_ を使用して、dotファイルからグラフファイルを生成する方法を説明します。
 
-..  [#] http://www.graphviz.org/
+..  [#] https://www.graphviz.org/
 
 Graphvizのインストール
 ----------------------

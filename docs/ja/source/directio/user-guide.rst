@@ -108,7 +108,7 @@ Direct I/Oのトランザクション処理は主に以下の流れで行いま�
 ..  [#] 詳しくは `システムディレクトリの設定`_ を参照してください。
 ..  [#] 例えばHadoopファイルシステムを経由して Amazon Simple Storage Service ( `Amazon S3`_ )を利用する場合、データの移動に時間がかかるようです。後述の `Amazon S3での設定例`_ も参考にしてください。
 
-..  _`Amazon S3`: http://aws.amazon.com/s3/
+..  _`Amazon S3`: https://aws.amazon.com/s3/
 
 データソースの設定
 ==================
@@ -136,7 +136,7 @@ Direct I/Oの機構を利用するには、入出力の仲介を行う「デー�
     Hadoop本体の ``core-site.xml`` 等と同様の形式 [#]_ ですが、 ``${...}`` 形式でのシステムプロパティの展開をサポートしていません。
 
 ..  [#] :doc:`実行時プラグイン <../administration/deployment-runtime-plugins>` の設定にも利用しています。
-..  [#] http://hadoop.apache.org/docs/r1.2.1/api/org/apache/hadoop/conf/Configuration.html
+..  [#] https://hadoop.apache.org/docs/r1.2.1/api/org/apache/hadoop/conf/Configuration.html
 
 データソースの追加
 ------------------

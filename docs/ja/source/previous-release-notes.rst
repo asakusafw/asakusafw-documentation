@@ -428,7 +428,7 @@ Asakusa on Spark
 
 2015年からDeveloper Previewとして公開していた Asakusa on Spark を正式機能として公開しました。
 
-Asakusa on Sparkは、Asakusa DSLを始めとするAsakusa Frameworkの開発基盤を利用して作成したバッチアプリケーションに対して、Apache Spark (http://spark.apache.org) を実行基盤として利用するための機能セットを提供します。
+Asakusa on Sparkは、Asakusa DSLを始めとするAsakusa Frameworkの開発基盤を利用して作成したバッチアプリケーションに対して、Apache Spark (https://spark.apache.org) を実行基盤として利用するための機能セットを提供します。
 
 特に中規模〜大規模のデータを扱うバッチに対して、Asakusa on Sparkは優れたパフォーマンスを発揮します。
 
@@ -580,7 +580,7 @@ Direct I/O lineは、以下のような用途に利用することを想定し�
 
 * Direct I/Oが対応していないファイルフォーマットの入出力
 
-  * 例えば `JSON <http://json.org>`_ や `LTSV <http://ltsv.org>`_ といったフォーマットを扱う場合に、行文字列をパースする処理と組み合わせて利用します。
+  * 例えば `JSON <https://json.org>`_ や `LTSV <http://ltsv.org>`_ といったフォーマットを扱う場合に、行文字列をパースする処理と組み合わせて利用します。
 * 入力ファイルの整形や形式変換、バリデーションチェックなどの事前処理
 
   * 例えばCSVファイルの一部にDirect I/Oでは直接扱えないような形式が含まれる場合に、事前に形式の変換を行うといった用途で利用します。
@@ -1047,10 +1047,10 @@ Hadoop2系での動作については、MRv2(YARN)上でアプリケーション
     本バージョンでは、Hadoop2系の対応は試験的機能として提供されます。
     Hadoop2系の利用について詳しくは :doc:`administration/deployment-hadoop2` を参照してください。
 
-..  [#] http://www.cloudera.co.jp/products-services/cdh/cdh.html
-..  [#] http://aws.amazon.com/jp/elasticmapreduce/
-..  [#] http://www.ubuntu.com/desktop
-..  [#] http://www.gradle.org/
+..  [#] https://www.cloudera.co.jp/products-services/cdh/cdh.html
+..  [#] https://aws.amazon.com/jp/elasticmapreduce/
+..  [#] https://www.ubuntu.com/desktop
+..  [#] https://www.gradle.org/
 
 YAESSログの可視化
 ~~~~~~~~~~~~~~~~~

@@ -29,8 +29,8 @@ Asakusa DSLは、データフロー形式でのバッチ処理設計から素直
 
 Asakusa Frameworkを利用したバッチ処理の設計例については、 `Asakusa Frameworkコミュニティサイト`_ の `バッチ設計と実装ガイド`_ を参照してください。
 
-..  _`Asakusa Frameworkコミュニティサイト` : http://www.asakusafw.com/
-..  _`バッチ設計と実装ガイド` : http://www.asakusafw.com/techinfo/methodology.html
+..  _`Asakusa Frameworkコミュニティサイト` : https://www.asakusafw.com/
+..  _`バッチ設計と実装ガイド` : https://www.asakusafw.com/techinfo/methodology.html
 
 DSLコンパイラ
 -------------
@@ -368,7 +368,7 @@ Operator DSLコンパイラは作成した `演算子クラス`_ をコンパイ
     Operator DSLコンパイラに注釈プロセッサの仕組みを採用した理由は、主にIDEとの親和性です。
     注釈プロセッサはJavaコンパイラの一部のようにふるまうため、注釈プロセッサ内で発生したエラーをコンパイルエラーのようにIDE上に表示させています。
 
-.. _`注釈プロセッサ`: http://www.jcp.org/en/jsr/detail?id=269
+.. _`注釈プロセッサ`: https://www.jcp.org/en/jsr/detail?id=269
 
 演算子実装クラス
 ~~~~~~~~~~~~~~~~

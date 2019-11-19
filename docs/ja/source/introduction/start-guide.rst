@@ -67,7 +67,7 @@ Shafu (車夫) は、 Asakusa Framework のバッチアプリケーション開�
 
 * :jinrikisha:`Shafu - Asakusa Gradle Plug-in Helper for Eclipse - <shafu.html>`
 
-Asakusa Frameworkではアプリケーションのビルドに `Gradle <http://www.gradle.org/>`_ というビルドシステムを利用しますが、
+Asakusa Frameworkではアプリケーションのビルドに `Gradle <https://www.gradle.org/>`_ というビルドシステムを利用しますが、
 Shafuを使うことで、Gradleに関する詳細な知識がなくてもAsakusa Frameworkの基本的な開発作業が行えるようになります。
 また、コマンドライン上でのGradleの操作が不要となり、Eclipse上でアプリケーション開発に必要なほとんどの作業を行うことができるようになります。
 
@@ -106,7 +106,7 @@ ShafuはEclipseプラグインとして公開されており、一般的なEclip
 #. :guilabel:`Add Repository` ダイアログに以下の値を入力します。
 
    * :guilabel:`Name:` 任意の名前(例: ``Jinrikisha`` )
-   * :guilabel:`Location:` ``http://www.asakusafw.com/eclipse/jinrikisha/updates/``
+   * :guilabel:`Location:` ``https://www.asakusafw.com/eclipse/jinrikisha/updates/``
 #. :guilabel:`Install` ダイアログに表示された :guilabel:`Jinrikisha (人力車)` カテゴリを展開して :guilabel:`Asakusa Gradle プラグインサポート` を選択し、 :guilabel:`Next >` ボタンを押下します。
 #. 以降、画面の指示に従いインストールを進めます。Eclipseの再起動を促されたら :guilabel:`Yes` を選択します。
 #. Eclipseの再起動が完了したら :guilabel:`Java` パースペクティブを選択し、 メニューバーから :menuselection:`Window --> Perspective --> Reset Perspective..` を選択して :guilabel:`Java` パースペクティブを初期化します。
@@ -160,11 +160,11 @@ Eclipse上で環境変数 ``ASAKUSA_HOME`` が有効になっていることを�
 
     * - プロジェクトテンプレート
       - 説明
-    * - `asakusa-spark-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.4.tar.gz>`_
+    * - `asakusa-spark-template-0.10.4.tar.gz <https://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.4.tar.gz>`_
       - :doc:`../spark/index` を利用するプロジェクトテンプレート
-    * - `asakusa-m3bp-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.4.tar.gz>`_
+    * - `asakusa-m3bp-template-0.10.4.tar.gz <https://www.asakusafw.com/download/gradle-plugin/asakusa-m3bp-template-0.10.4.tar.gz>`_
       - :doc:`../m3bp/index` を利用するプロジェクトテンプレート
-    * - `asakusa-mapreduce-template-0.10.4.tar.gz <http://www.asakusafw.com/download/gradle-plugin/asakusa-mapreduce-template-0.10.4.tar.gz>`_
+    * - `asakusa-mapreduce-template-0.10.4.tar.gz <https://www.asakusafw.com/download/gradle-plugin/asakusa-mapreduce-template-0.10.4.tar.gz>`_
       - :doc:`../mapreduce/index` を利用するプロジェクトテンプレート
 
 コマンドライン上から作成する場合、上記のURLに公開されているプロジェクトテンプレートのアーカイブを展開します。
@@ -173,7 +173,7 @@ Eclipse上で環境変数 ``ASAKUSA_HOME`` が有効になっていることを�
 ..  code-block:: sh
 
     cd <work-dir>
-    curl -OL http://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.4.tar.gz
+    curl -OL https://www.asakusafw.com/download/gradle-plugin/asakusa-spark-template-0.10.4.tar.gz
     tar xf asakusa-spark-template-0.10.4.tar.gz
     mv asakusa-spark-template my-batchapp
     cd my-batchapp
@@ -259,7 +259,7 @@ Asakusa Frameworkの `サンプルプログラム集 (GitHub)`_ ではいくつ�
 バッチアプリケーションの入力データ取得と出力データ生成には、Asakusa Frameworkの「Direct I/O」と呼ばれるコンポーネントを利用しています。
 Direct I/Oを利用して、Hadoopファイルシステム上のCSVファイルに対して入出力を行います。
 
-..  _`サンプルプログラム集 (GitHub)`: http://github.com/asakusafw/asakusafw-examples
+..  _`サンプルプログラム集 (GitHub)`: https://github.com/asakusafw/asakusafw-examples
 
 サンプルアプリケーションプロジェクトの作成
 ------------------------------------------
