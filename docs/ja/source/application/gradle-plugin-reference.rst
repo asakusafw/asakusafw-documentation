@@ -7,7 +7,7 @@ Asakusa Gradle Plugin リファレンス
 リポジトリ
 ==========
 
-Asakusa Gradle PluginはAsakusa FrameworkのMavenリポジトリ( http://asakusafw.s3.amazonaws.com/maven/releases )に以下のMavenアーティファクトが登録されています。
+Asakusa Gradle PluginはAsakusa FrameworkのMavenリポジトリ( https://asakusafw.s3.amazonaws.com/maven/releases )に以下のMavenアーティファクトが登録されています。
 
 ..  list-table:: Asakusa Gradle PluginのMavenアーティファクト
     :widths: 2 2 6
@@ -52,7 +52,7 @@ Gradle Pluginのバージョンを自動的に適用し、これらを単一の�
 
     buildscript {
         repositories {
-            maven { url 'http://asakusafw.s3.amazonaws.com/maven/releases' }
+            maven { url 'https://asakusafw.s3.amazonaws.com/maven/releases' }
         }
         dependencies {
             classpath group: 'com.asakusafw.gradle', name: 'asakusa-distribution', version: '0.10.4'
@@ -255,11 +255,11 @@ Batch Application Plugin は、以下のリポジトリをプロジェクトに�
 
     * - 名前/URL
       - 説明
-    * - ``http://repo1.maven.org/maven2/``
+    * - ``https://repo.maven.apache.org/``
       - Mavenのセントラルリポジトリ
-    * - ``http://asakusafw.s3.amazonaws.com/maven/releases``
+    * - ``https://asakusafw.s3.amazonaws.com/maven/releases``
       - Asakusa Frameworkのリリース用Mavenリポジトリ
-    * - ``http://asakusafw.s3.amazonaws.com/maven/snapshots``
+    * - ``https://asakusafw.s3.amazonaws.com/maven/snapshots``
       - Asakusa Frameworkのスナップショット用Mavenリポジトリ
 
 ..  tip::
