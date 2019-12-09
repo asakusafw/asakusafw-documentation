@@ -30,8 +30,8 @@ Jun 12, 2019
       - 0.3.3 (|VERSION_UP|)
       - [ :milestone-asakusafw-m3bp:`0.3.3` ]
     * - |M3BP_ENGINE|
-      - 0.1.3
-      - [ :milestone-m3bp:`0.1.3` ]
+      - 0.1.2
+      - [ :milestone-m3bp:`0.1.2` ]
     * - Asakusa on MapReduce
       - 0.10.3 (|VERSION_UP|)
       - [ :milestone-asakusafw-mapreduce:`0.10.3` ] (deprecated)
