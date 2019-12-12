@@ -5,6 +5,47 @@
 Asakusa Frameworkのリリースノートです。
 すべての変更点は :doc:`changelogs` を参照してください。
 
+Release 0.10.4
+==============
+
+(開発中)
+
+`Asakusa Framework 0.10.4 documentation`_
+
+..  _`Asakusa Framework 0.10.4 documentation`: https://docs.asakusafw.com/0.10.4/release/ja/html/index.html
+
+新機能と主な変更点
+------------------
+
+Asaksua Gradle Pluginが追加するMavenリポジトリのプロトコル変更
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Asaksua Gradle Pluginがプロジェクトに対して追加するMavenリポジトリのURLプロトコルを
+``http:`` から ``https:`` に変更しました。
+
+Asaksua Gradle Plugin が標準でプロジェクトに追加するMavenリポジトリ定義については、
+以下の項を参照してください。
+
+* :doc:`application/gradle-plugin-reference` - :ref:`batch-application-plugin-reference` - リポジトリ
+
+Asaksua Gradle Pluginが起動するJavaプロセスのヒープサイズ指定が効かない問題の修正
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+バッチアプリケーションプロジェクトの ``build.gradle`` に対してビルドを実行するJavaプロセスのヒープサイズを指定するプロパティ
+``asakusafw.maxHeapSize`` を追加しても有効にならない問題を修正しました。
+
+この設定に関して詳しくは、以下の項を参照してください。
+
+* :doc:`application/gradle-plugin-reference` - :ref:`batch-application-plugin-reference` - 規約プロパティ
+
+その他、細かな機能改善およびバグフィックスが含まれます。
+すべての変更点は :doc:`changelogs` を参照してください。
+
+互換性に関して
+--------------
+
+本リリースでは過去バージョンとの互換性に関する特別な情報はありません。
+
 Release 0.10.3
 ==============
 
