@@ -8,7 +8,7 @@ Asakusa Frameworkのリリースノートです。
 Release 0.10.4
 ==============
 
-(開発中)
+Dec 18, 2019
 
 `Asakusa Framework 0.10.4 documentation`_
 
