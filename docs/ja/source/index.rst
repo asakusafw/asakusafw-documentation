@@ -15,6 +15,11 @@ Asakusa Frameworkの適用事例などについてはコミュニティサイト
 ドキュメント
 ============
 
+..  attention::
+    2020/1/15 以降、Asakusa Framework バージョン ``0.6.0`` ～ ``0.10.3`` でビルドエラーが発生する問題について、以下のドキュメントで説明しています。
+    
+    * :doc:`application/decommissioning-http`
+
 Asakusa Framework入門
 ---------------------
 

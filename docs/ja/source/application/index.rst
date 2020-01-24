@@ -52,3 +52,4 @@ Asakusa Frameworkの開発環境(OSやAsakusa Frameworkが利用するソフト�
     using-jdk
     intellij-idea
     gradle-plugin-deprecated
+    decommissioning-http
