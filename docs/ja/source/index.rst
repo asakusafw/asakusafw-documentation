@@ -10,7 +10,7 @@ Asakusa Frameworkは分散処理技術を活かしたバッチアプリケーシ
 
 このサイトでは、Asakusa Frameworkの開発運用時の利用方法や、フレームワーク内部の技術的な情報を提供します。
 
-Asakusa Frameworkの適用事例などについてはコミュニティサイト (https://asakusafw.com) も参考にしてください。
+Asakusa Frameworkの適用事例などについてはコミュニティサイト (https://www.asakusafw.com) も参考にしてください。
 
 ドキュメント
 ============
