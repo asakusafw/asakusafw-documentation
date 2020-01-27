@@ -255,7 +255,7 @@ Batch Application Plugin は、以下のリポジトリをプロジェクトに�
 
     * - 名前/URL
       - 説明
-    * - ``https://repo.maven.apache.org/``
+    * - ``https://repo.maven.apache.org/maven2``
       - Mavenのセントラルリポジトリ
     * - ``https://asakusafw.s3.amazonaws.com/maven/releases``
       - Asakusa Frameworkのリリース用Mavenリポジトリ
