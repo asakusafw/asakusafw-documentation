@@ -86,7 +86,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Asakusa Framework'
-copyright = u'2011-2019, Asakusa Framework Team'
+copyright = u'2011-2021, Asakusa Framework Team'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
